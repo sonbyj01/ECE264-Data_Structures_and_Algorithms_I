@@ -9,6 +9,19 @@ void readFile(ifstream& infile, ofstream& outfile);
 vector<string> split(const string &s, char delimiter);
 
 /*
+ * Function that processes the commands
+ * Returns: nothing
+ */
+void runCommands(vector<string> tokens)
+{
+    while(tokens.size() != 0)
+    {
+        
+    }
+    return;
+}
+
+/*
  * Function that reads the input file line-by-line, sends to output file, and runs the commands 
  * Returns: nothing
  */

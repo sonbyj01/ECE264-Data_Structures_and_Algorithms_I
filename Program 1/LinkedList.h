@@ -2,7 +2,7 @@
 #define LINKEDLIST_H
 
 #include <string>
-
+#include <vector>
 template <typename T>
 class Node 
 {

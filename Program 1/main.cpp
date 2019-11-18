@@ -1,66 +1,15 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-#include <sstream> 
+#include "Functions.h"
+#include "LinkedList.h"
 using namespace std;
 
-void readFile(ifstream& infile, ofstream& outfile);
-vector<string> split(const string &s, char delimiter);
-
-/*
- * Function that processes the commands
- * Returns: nothing
- */
-void runCommands(vector<string> tokens)
+void main() 
 {
-    while(tokens.size() != 0)
-    {
-        
-    }
+    runProgram();
     return;
 }
 
-/*
- * Function that reads the input file line-by-line, sends to output file, and runs the commands 
- * Returns: nothing
- */
-void readFile(ifstream& infile, ofstream& outfile)
-{
-    if(infile)
-    {
-        string commands;
-        while(getline(infile, commands))
-        {
-            vector<string> tokens = split(commands, ' ');
-            outfile << "PROCESSING COMMAND: " << commands << endl;
-            runCommands()
-        }
-        infile.close();
-    } else 
-    {
-        cout << "File cannot be opened" << endl;
-    }
-    return;
-}
-
-/*
- * Function that splits a line of commands and puts it into a vector
- * Returns: a vector string that contains tokens of commands
- */
-vector<string> split(const string &s, char delimiter)
-{
-    vector<string> tokens;
-    string token;
-    istringstream tokenStream(s);
-    while(getline(tokenStream, token, delimiter))
-    {
-        tokens.push_back(token);
-    }
-    return tokens;
-}
-
-int main() 
+// --- IMPLEMENTATIONS OF 'Functions.h' ---
+void runProgram()
 {
     string inputFile;
     string outputFile;
@@ -74,5 +23,71 @@ int main()
     ofstream outfile(outputFile);
 
     readFile(infile, outfile);
-    return 0;
+    return;
+}
+
+void readFile(ifstream& infile, ofstream& outfile)
+{
+    if(infile)
+    {
+        string commands;
+        while(getline(infile, commands))
+        {
+            vector<string> tokens = split(commands, ' ');
+            outfile << "PROCESSING COMMAND: " << commands << endl;
+            runCommands(tokens);
+        };
+        infile.close();
+    } else 
+    {
+        cout << "File cannot be opened." << endl;
+    }
+    return;
+}
+
+vector<string> split(const string &s, char delimiter)
+{
+    vector<string> tokens;
+    string token;
+    istringstream tokenStream(s);
+    while(getline(tokenStream, token, delimiter))
+    {
+        tokens.push_back(token);
+    };
+    return tokens;
+}
+
+template <typename T>
+void runCommands(vector<string> tokens)
+{
+    if(tokens[0] == "create")
+    {
+        create(tokens);
+    } else if(tokens[0] == "push")
+    {
+        push(tokens);
+    } else if(tokens[0] == "pop")
+    {
+        pop(tokens);
+    }
+    return;
+}
+
+template <typename T>
+void create(list<LinkedList<T> *> &lists, const vector<std::string> &commands, ofstream &outfile) 
+{
+    for (LinkedList<T> *list: lists) 
+    {
+        if (list->getName() == commands[1]) 
+        {
+            outfile << "ERROR: This name already exists!" << std::endl;
+            return;
+        }
+    }
+
+    if (commands[2] == "queue") {
+        create_queue(lists, commands);
+    } else if (commands[2] == "stack") {
+        create_stack(lists, commands);
+    }
 }

@@ -21,7 +21,7 @@ void runProgram()
     return;
 }
 
-void readFile(std::ifstream& infile, std::ofstream &outfile, std::list<SimpleList<int> *> &listInteger, 
+void readFile(std::ifstream &infile, std::ofstream &outfile, std::list<SimpleList<int> *> &listInteger, 
 std::list<SimpleList<double> *> &listDouble, std::list<SimpleList<std::string> *> &listString)
 {
     if(infile)
@@ -32,7 +32,7 @@ std::list<SimpleList<double> *> &listDouble, std::list<SimpleList<std::string> *
             std::vector<std::string> tokens = split(commands, ' ');
             outfile << "PROCESSING COMMAND: " << commands << std::endl;
             runCommand(tokens, outfile, listInteger, listDouble, listString);
-        };
+        }
         infile.close();
     } else 
     {
@@ -53,7 +53,7 @@ std::vector<std::string> split(const std::string &s, char delimiter)
     return tokens;
 }
 
-void runCommand(std::vector<std::string> tokens, std::ofstream &outfile, std::list<SimpleList<int> *> &listInteger, 
+void runCommand(std::vector<std::string> &tokens, std::ofstream &outfile, std::list<SimpleList<int> *> &listInteger, 
 std::list<SimpleList<double> *> &listDouble, std::list<SimpleList<std::string> *> &listString)
 {
     if(tokens[0] == "create")
@@ -70,7 +70,7 @@ std::list<SimpleList<double> *> &listDouble, std::list<SimpleList<std::string> *
 }
 
 template <typename T>
-SimpleList<T> chooseList(std::vector<std::string> tokens, std::list<SimpleList<int> *> &listInteger, 
+SimpleList<T>& chooseList(std::vector<std::string> &tokens, std::list<SimpleList<int> *> &listInteger, 
 std::list<SimpleList<double> *> &listDouble, std::list<SimpleList<std::string> *> &listString)
 {
     char type = tokens[1][0];

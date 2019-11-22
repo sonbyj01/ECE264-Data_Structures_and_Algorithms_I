@@ -19,10 +19,10 @@ void LinkedList<T>::pop()
 {
     if(head == nullptr && tail == nullptr)
     {
-        cout << "ERROR: This list is empty!" << endl;
+        std::cout << "ERROR: This list is empty!" << std::endl;
     } else 
     {
-        Node *temp = this->head;
+        Node<T> *temp = this->head;
         this->head = this->head->getNextNode();
         delete temp;
     }
@@ -53,7 +53,7 @@ Stack<T>::Stack(std::string nameP)
 template <typename T>
 void Stack<T>::push(T valueP)
 {
-    Node *node = new class Node(valueP);
+    Node<T> *node = new class Node<T>(valueP);
     node->setNextNode(this->head);
     this->head = node;
     return;
@@ -76,9 +76,9 @@ Queue<T>::Queue(std::string nameP)
 }
 
 template <typename T>
-void Stack<T>::push(T valueP)
+void Queue<T>::push(T valueP)
 {
-    Node *node = new class Node(valueP);
+    Node<T> *node = new class Node<T>(valueP);
     this->tail->setNextNode(node);
     this->tail = node;
     return;

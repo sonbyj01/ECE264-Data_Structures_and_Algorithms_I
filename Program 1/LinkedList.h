@@ -3,15 +3,17 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
+
 template <typename T>
 class Node 
 {
     private:
-        Node *next;
+        Node<T> *next;
         T value;
     public:
         // Constructor of a node
-        explicit Node(T valueP)
+        Node(T valueP)
         {
             next = nullptr;
             value = valueP;
@@ -37,9 +39,9 @@ template <typename T>
 class LinkedList
 {
     protected:
-        Node* head;
-        Node* tail;
-        string name;
+        Node<T> *head;
+        Node<T> *tail;
+        std::string name;
     public:
         LinkedList();
         virtual void push(T value);

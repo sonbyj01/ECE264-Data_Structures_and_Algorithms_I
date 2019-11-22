@@ -1,5 +1,5 @@
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
+#ifndef SIMPLELIST_H
+#define SIMPLELIST_H
 
 #include <string>
 #include <vector>
@@ -36,17 +36,34 @@ class Node
 };
 
 template <typename T>
-class LinkedList
+class SimpleList
 {
     protected:
         Node<T> *head;
         Node<T> *tail;
         std::string name;
     public:
-        LinkedList();
+        SimpleList();
         virtual void push(T value);
         void pop();
+        bool checkPop();
         T top();
         std::string getName();
+};
+
+template <typename T>
+class Stack : public SimpleList<T>
+{
+    public: 
+        explicit Stack(std::string name);
+        void push(T value);
+};
+
+template <typename T>
+class Queue : public SimpleList<T>
+{
+    public: 
+        explicit Queue(std::string name);
+        void push(T value);
 };
 #endif

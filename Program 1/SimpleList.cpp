@@ -1,7 +1,7 @@
-#include "LinkedList.h"
+#include "SimpleList.h"
 
 template <typename T>
-LinkedList<T>::LinkedList()
+SimpleList<T>::SimpleList()
 {
     head = nullptr;
     tail = nullptr;
@@ -9,13 +9,13 @@ LinkedList<T>::LinkedList()
 }
 
 template <typename T>
-std::string LinkedList<T>::getName()
+std::string SimpleList<T>::getName()
 {
     return this->name;
 }
 
 template <typename T>
-void LinkedList<T>::pop()
+void SimpleList<T>::pop()
 {
     if(head == nullptr && tail == nullptr)
     {
@@ -29,19 +29,18 @@ void LinkedList<T>::pop()
 }
 
 template <typename T>
-T LinkedList<T>::top()
+bool SimpleList<T>::checkPop() 
+{
+    return !(this->head == nullptr && this->tail == nullptr);
+}
+
+template <typename T>
+T SimpleList<T>::top()
 {
     return this->head->getVaue();
 }
 
 // Stack -----------------
-template <typename T>
-class Stack : public LinkedList<T>
-{
-    explicit Stack(std::string nameP);
-    void push(T value);
-};
-
 template <typename T>
 Stack<T>::Stack(std::string nameP)
 {
@@ -60,13 +59,6 @@ void Stack<T>::push(T valueP)
 }
 
 // Queue -----------------
-template <typename T>
-class Queue : public LinkedList<T>
-{
-    explicit Queue(std::string nameP);
-    void push(T value);
-};
-
 template <typename T>
 Queue<T>::Queue(std::string nameP)
 {

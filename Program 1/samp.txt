@@ -1,8 +1,0 @@
-PROCESSING COMMAND: create i1 queue
-PROCESSING COMMAND: create i1 queue
-ERROR: This name already exists!
-PROCESSING COMMAND: create i1 stack
-ERROR: This name already exists!
-PROCESSING COMMAND: create i2 stack
-PROCESSING COMMAND: create s99 stack
-PROCESSING COMMAND: push i1 50

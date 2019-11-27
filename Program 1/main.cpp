@@ -17,6 +17,7 @@ void runProgram()
     std::string inputFile;
     std::string outputFile;
 
+    // Lists of SimpleList of types
     std::list<SimpleList<int> *> listInteger;
     std::list<SimpleList<double> *> listDouble;
     std::list<SimpleList<std::string> *> listString;
@@ -137,13 +138,11 @@ void push(std::list<SimpleList<T> *> &lists, const std::vector<std::string> &tok
     }
     for(auto const& list : lists)
     {
-        std::cout << list->getName() << std::endl;
         if(list->getName() == tokens[1])
         {
             std::stringstream ss(tokens[2]);
             T val;
             ss >> val;
-            std::cout << val << std::endl;
             list->push(val);
         }
     }
@@ -164,9 +163,11 @@ void pop(std::list<SimpleList<T> *> &lists, const std::vector<std::string> &toke
             if(!list->checkPop())
             {
                 outfile << "ERROR: This list is empty!" << std::endl;
+            } else
+            {
+                outfile << "Value popped: " << list->top() << std::endl;
+                list->pop();
             }
-            outfile << "Value popped: " << list->top() << std::endl;
-            list->pop();
         }
     }
     return;

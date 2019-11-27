@@ -78,9 +78,11 @@ SimpleList<T>::SimpleList()
 {
     head = nullptr;
     tail = nullptr;
+        std::string getName();
     name = "";
 }
 
+// Sets the head of the list with 'nodeP'
 template <typename T>
 void SimpleList<T>::setHead(Node *nodeP)
 {
@@ -88,6 +90,7 @@ void SimpleList<T>::setHead(Node *nodeP)
     return;
 }
 
+// Sets the tail of the list with 'nodeP'
 template <typename T>
 void SimpleList<T>::setTail(Node *nodeP)
 {
@@ -95,6 +98,7 @@ void SimpleList<T>::setTail(Node *nodeP)
     return;
 }
 
+// Sets the name of the list
 template <typename T>
 void SimpleList<T>::setName(std::string nameP)
 {
@@ -102,19 +106,26 @@ void SimpleList<T>::setName(std::string nameP)
     return;
 }
 
+// Returns the name of the list
 template <typename T>
 std::string SimpleList<T>::getName()
 {
     return this->name;
 }
 
+// Pops the top of the list
 template <typename T>
 void SimpleList<T>::pop_value()
 {
     if(head == nullptr && tail == nullptr)
     {
         std::cout << "ERROR: This list is empty!" << std::endl;
-    } else 
+    }
+    if(head == tail){
+        head = nullptr;
+        tail = nullptr;
+    } 
+    else 
     {
         Node *temp = this->head;
         this->head = this->head->getNextNode();
@@ -122,39 +133,45 @@ void SimpleList<T>::pop_value()
     }
 }
 
+// Pushes a node of value 'valueP' to the front of the list
 template <typename T>
 void SimpleList<T>::push_front(T valueP)
 {
-    std::cout << "41 process" << std::endl;
     class SimpleList<T>::Node *node = new class SimpleList<T>::Node(valueP);
-    std::cout << "42 process" << std::endl;
-    node->setNextNode(this->head);
-    std::cout << "43 process" << std::endl;
-    this->head = node;
-    std::cout << "44 process" << std::endl;
+    if(head == nullptr && tail == nullptr){
+        this->setHead(node);
+        this->setTail(node);
+    }    
+    else{
+        node->setNextNode(this->head);
+        this->setHead(node);
+    }
     return;
 }
 
+// Pushes a node of value 'valueP' to the end of the list
 template <typename T>
 void SimpleList<T>::push_back(T valueP)
 {
-    std::cout << "41 process" << std::endl;
     class SimpleList<T>::Node *node = new class SimpleList<T>::Node(valueP);
-    std::cout << "42 process" << std::endl;
-    std::cout << node->getValue() << std::endl;
-    this->tail->setNextNode(node);
-    std::cout << "43 process" << std::endl;
-    this->tail = node;
-    std::cout << "44 process" << std::endl;
-    return;
+    if(head == nullptr && tail == nullptr){
+        this->setHead(node);
+        this->setTail(node);
+    }    
+    else{
+        this->tail->setNextNode(node);
+        this->setTail(node);
+    }
 }
 
+// Returns false if the stack/queue is empty
 template <typename T>
 bool SimpleList<T>::checkPop() 
 {
     return !(this->head == nullptr && this->tail == nullptr);
 }
 
+// Returns the top value of the stack/queue
 template <typename T>
 T SimpleList<T>::top()
 {
@@ -170,21 +187,23 @@ Stack<T>::Stack(std::string nameP)
     SimpleList<T>::setName(nameP);
 }
 
+// Pushes the Node value to the front of the Stack
 template <typename T>
 void Stack<T>::push(T valueP)
 {
-    SimpleList<T>::push_front(valueP);
+    this->push_front(valueP);
     return;
 }
 
+// Calls the pop function declared in SingleList
 template <typename T>
 void Stack<T>::pop()
 {
-    SimpleList<T>::pop_value();
+    this->pop_value();
     return;
 }
 
-// Queue -----------------
+// --- Queue ---
 template <typename T>
 Queue<T>::Queue(std::string nameP)
 {
@@ -193,17 +212,19 @@ Queue<T>::Queue(std::string nameP)
     SimpleList<T>::setName(nameP);
 }
 
+// Pushes the Node value to the back of the Queue
 template <typename T>
 void Queue<T>::push(T valueP)
 {
-    SimpleList<T>::push_back(valueP);
+    this->push_back(valueP);
     return;
 }
 
+// Calls the pop function declared in SingleList
 template <typename T>
 void Queue<T>::pop()
 {
-    SimpleList<T>::pop_value();
+    this->pop_value();
     return;
 }
 

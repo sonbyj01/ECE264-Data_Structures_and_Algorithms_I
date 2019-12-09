@@ -3,1002 +3,1000 @@
 
 #include <map>
 #include <string>
-std::map<std::string, int> lookLast = {{ "ACOSTA
-", 1 }, { "ADAMS
-", 2 }, { "ADKINS
-", 3 }, { "AGUILAR
-", 4 }, { "AGUIRRE
-", 5 }, { "ALEXANDER
-", 6 }, { "ALLEN
-", 7 }, { "ALVARADO
-", 8 }, { "ALVAREZ
-", 9 }, { "ANDERSON
-", 10 }, { "ANDREWS
-", 11 }, { "ARMSTRONG
-", 12 }, { "ARNOLD
-", 13 }, { "AUSTIN
-", 14 }, { "AVILA
-", 15 }, { "AYALA
-", 16 }, { "BAILEY
-", 17 }, { "BAKER
-", 18 }, { "BALDWIN
-", 19 }, { "BANKS
-", 20 }, { "BARBER
-", 21 }, { "BARKER
-", 22 }, { "BARNES
-", 23 }, { "BARNETT
-", 24 }, { "BARRETT
-", 25 }, { "BARTON
-", 26 }, { "BATES
-", 27 }, { "BECK
-", 28 }, { "BECKER
-", 29 }, { "BELL
-", 30 }, { "BENNETT
-", 31 }, { "BENSON
-", 32 }, { "BERRY
-", 33 }, { "BISHOP
-", 34 }, { "BLACK
-", 35 }, { "BLAIR
-", 36 }, { "BLAKE
-", 37 }, { "BOWEN
-", 38 }, { "BOWMAN
-", 39 }, { "BOYD
-", 40 }, { "BRADLEY
-", 41 }, { "BRADY
-", 42 }, { "BREWER
-", 43 }, { "BROOKS
-", 44 }, { "BROWN
-", 45 }, { "BRYANT
-", 46 }, { "BURGESS
-", 47 }, { "BURKE
-", 48 }, { "BURNS
-", 49 }, { "BURTON
-", 50 }, { "BUSH
-", 51 }, { "BUTLER
-", 52 }, { "BYRD
-", 53 }, { "CABRERA
-", 54 }, { "CALDERON
-", 55 }, { "CALDWELL
-", 56 }, { "CAMACHO
-", 57 }, { "CAMPBELL
-", 58 }, { "CAMPOS
-", 59 }, { "CANNON
-", 60 }, { "CARDENAS
-", 61 }, { "CARLSON
-", 62 }, { "CARPENTER
-", 63 }, { "CARR
-", 64 }, { "CARRILLO
-", 65 }, { "CARROLL
-", 66 }, { "CARTER
-", 67 }, { "CASTANEDA
-", 68 }, { "CASTILLO
-", 69 }, { "CASTRO
-", 70 }, { "CERVANTES
-", 71 }, { "CHAMBERS
-", 72 }, { "CHAN
-", 73 }, { "CHANDLER
-", 74 }, { "CHANG
-", 75 }, { "CHAPMAN
-", 76 }, { "CHAVEZ
-", 77 }, { "CHEN
-", 78 }, { "CHRISTENSEN
-", 79 }, { "CLARK
-", 80 }, { "CLARKE
-", 81 }, { "COHEN
-", 82 }, { "COLE
-", 83 }, { "COLEMAN
-", 84 }, { "COLLINS
-", 85 }, { "COLON
-", 86 }, { "CONTRERAS
-", 87 }, { "COOK
-", 88 }, { "COOPER
-", 89 }, { "CORTEZ
-", 90 }, { "COX
-", 91 }, { "CRAIG
-", 92 }, { "CRAWFORD
-", 93 }, { "CROSS
-", 94 }, { "CRUZ
-", 95 }, { "CUMMINGS
-", 96 }, { "CUNNINGHAM
-", 97 }, { "CURRY
-", 98 }, { "CURTIS
-", 99 }, { "DANIEL
-", 100 }, { "DANIELS
-", 101 }, { "DAVIDSON
-", 102 }, { "DAVIS
-", 103 }, { "DAWSON
-", 104 }, { "DAY
-", 105 }, { "DEAN
-", 106 }, { "DELACRUZ
-", 107 }, { "DELEON
-", 108 }, { "DELGADO
-", 109 }, { "DENNIS
-", 110 }, { "DIAZ
-", 111 }, { "DIXON
-", 112 }, { "DOMINGUEZ
-", 113 }, { "DOUGLAS
-", 114 }, { "DOYLE
-", 115 }, { "DUNCAN
-", 116 }, { "DUNN
-", 117 }, { "DURAN
-", 118 }, { "EDWARDS
-", 119 }, { "ELLIOTT
-", 120 }, { "ELLIS
-", 121 }, { "ERICKSON
-", 122 }, { "ESPINOZA
-", 123 }, { "ESTRADA
-", 124 }, { "EVANS
-", 125 }, { "FARMER
-", 126 }, { "FERGUSON
-", 127 }, { "FERNANDEZ
-", 128 }, { "FIELDS
-", 129 }, { "FIGUEROA
-", 130 }, { "FISCHER
-", 131 }, { "FISHER
-", 132 }, { "FITZGERALD
-", 133 }, { "FLEMING
-", 134 }, { "FLETCHER
-", 135 }, { "FLORES
-", 136 }, { "FORD
-", 137 }, { "FOSTER
-", 138 }, { "FOWLER
-", 139 }, { "FOX
-", 140 }, { "FRANCIS
-", 141 }, { "FRANCO
-", 142 }, { "FRANK
-", 143 }, { "FRANKLIN
-", 144 }, { "FRAZIER
-", 145 }, { "FREEMAN
-", 146 }, { "FUENTES
-", 147 }, { "FULLER
-", 148 }, { "GALLAGHER
-", 149 }, { "GALLEGOS
-", 150 }, { "GARCIA
-", 151 }, { "GARDNER
-", 152 }, { "GARNER
-", 153 }, { "GARRETT
-", 154 }, { "GARZA
-", 155 }, { "GEORGE
-", 156 }, { "GIBSON
-", 157 }, { "GILBERT
-", 158 }, { "GILL
-", 159 }, { "GOMEZ
-", 160 }, { "GONZALES
-", 161 }, { "GONZALEZ
-", 162 }, { "GOODMAN
-", 163 }, { "GOODWIN
-", 164 }, { "GORDON
-", 165 }, { "GRAHAM
-", 166 }, { "GRANT
-", 167 }, { "GRAVES
-", 168 }, { "GRAY
-", 169 }, { "GREEN
-", 170 }, { "GREENE
-", 171 }, { "GREGORY
-", 172 }, { "GRIFFIN
-", 173 }, { "GRIFFITH
-", 174 }, { "GROSS
-", 175 }, { "GUERRA
-", 176 }, { "GUERRERO
-", 177 }, { "GUTIERREZ
-", 178 }, { "GUZMAN
-", 179 }, { "HAIL
-", 180 }, { "HALE
-", 181 }, { "HALL
-", 182 }, { "HAMILTON
-", 183 }, { "HAMMOND
-", 184 }, { "HAMPTON
-", 185 }, { "HANSEN
-", 186 }, { "HANSON
-", 187 }, { "HARDY
-", 188 }, { "HARMON
-", 189 }, { "HARPER
-", 190 }, { "HARRINGTON
-", 191 }, { "HARRIS
-", 192 }, { "HARRISON
-", 193 }, { "HART
-", 194 }, { "HARVEY
-", 195 }, { "HAWKINS
-", 196 }, { "HAYES
-", 197 }, { "HAYNES
-", 198 }, { "HENDERSON
-", 199 }, { "HENRY
-", 200 }, { "HERNANDEZ
-", 201 }, { "HERRERA
-", 202 }, { "HICKS
-", 203 }, { "HIGGINS
-", 204 }, { "HILL
-", 205 }, { "HINES
-", 206 }, { "HODGES
-", 207 }, { "HOFFMAN
-", 208 }, { "HOLLAND
-", 209 }, { "HOLMES
-", 210 }, { "HOLT
-", 211 }, { "HOPKINS
-", 212 }, { "HORTON
-", 213 }, { "HOWARD
-", 214 }, { "HOWELL
-", 215 }, { "HUANG
-", 216 }, { "HUBBARD
-", 217 }, { "HUDSON
-", 218 }, { "HUGHES
-", 219 }, { "HUNT
-", 220 }, { "HUNTER
-", 221 }, { "INGRAM
-", 222 }, { "JACKSON
-", 223 }, { "JACOBS
-", 224 }, { "JAMES
-", 225 }, { "JENKINS
-", 226 }, { "JENNINGS
-", 227 }, { "JENSEN
-", 228 }, { "JIMENEZ
-", 229 }, { "JOHNSON
-", 230 }, { "JOHNSTON
-", 231 }, { "JONES
-", 232 }, { "JORDAN
-", 233 }, { "JOSEPH
-", 234 }, { "JUAREZ
-", 235 }, { "KELLER
-", 236 }, { "KELLEY
-", 237 }, { "KELLY
-", 238 }, { "KENNEDY
-", 239 }, { "KHAN
-", 240 }, { "KIM
-", 241 }, { "KING
-", 242 }, { "KLEIN
-", 243 }, { "KNIGHT
-", 244 }, { "LAMBERT
-", 245 }, { "LANE
-", 246 }, { "LARA
-", 247 }, { "LARSON
-", 248 }, { "LAWRENCE
-", 249 }, { "LAWSON
-", 250 }, { "LE
-", 251 }, { "LEE
-", 252 }, { "LEON
-", 253 }, { "LEONARD
-", 254 }, { "LEWIS
-", 255 }, { "LI
-", 256 }, { "LIN
-", 257 }, { "LITTLE
-", 258 }, { "LIU
-", 259 }, { "LOGAN
-", 260 }, { "LONG
-", 261 }, { "LOPEZ
-", 262 }, { "LOVE
-", 263 }, { "LOWE
-", 264 }, { "LUCAS
-", 265 }, { "LUNA
-", 266 }, { "LYNCH
-", 267 }, { "LYONS
-", 268 }, { "MACK
-", 269 }, { "MALDONADO
-", 270 }, { "MALONE
-", 271 }, { "MANN
-", 272 }, { "MANNING
-", 273 }, { "MARQUEZ
-", 274 }, { "MARSHALL
-", 275 }, { "MARTIN
-", 276 }, { "MARTINEZ
-", 277 }, { "MASON
-", 278 }, { "MATTHEWS
-", 279 }, { "MAXWELL
-", 280 }, { "MAY
-", 281 }, { "MCCARTHY
-", 282 }, { "MCCOY
-", 283 }, { "MCDANIEL
-", 284 }, { "MCDONALD
-", 285 }, { "MCGEE
-", 286 }, { "MCKINNEY
-", 287 }, { "MCLAUGHLIN
-", 288 }, { "MEDINA
-", 289 }, { "MEJIA
-", 290 }, { "MENDEZ
-", 291 }, { "MENDOZA
-", 292 }, { "MEYER
-", 293 }, { "MILES
-", 294 }, { "MILLER
-", 295 }, { "MILLS
-", 296 }, { "MIRANDA
-", 297 }, { "MITCHELL
-", 298 }, { "MOLINA
-", 299 }, { "MONTGOMERY
-", 300 }, { "MONTOYA
-", 301 }, { "MOORE
-", 302 }, { "MORALES
-", 303 }, { "MORAN
-", 304 }, { "MORENO
-", 305 }, { "MORGAN
-", 306 }, { "MORRIS
-", 307 }, { "MORRISON
-", 308 }, { "MOSS
-", 309 }, { "MULLINS
-", 310 }, { "MUNOZ
-", 311 }, { "MURPHY
-", 312 }, { "MURRAY
-", 313 }, { "MYERS
-", 314 }, { "NAVARRO
-", 315 }, { "NEAL
-", 316 }, { "NELSON
-", 317 }, { "NEWMAN
-", 318 }, { "NEWTON
-", 319 }, { "NGUYEN
-", 320 }, { "NICHOLS
-", 321 }, { "NORMAN
-", 322 }, { "NORRIS
-", 323 }, { "NUNEZ
-", 324 }, { "OBRIEN
-", 325 }, { "OCHOA
-", 326 }, { "OCONNOR
-", 327 }, { "OLIVER
-", 328 }, { "OLSON
-", 329 }, { "ORTEGA
-", 330 }, { "ORTIZ
-", 331 }, { "OWENS
-", 332 }, { "PACHECO
-", 333 }, { "PADILLA
-", 334 }, { "PAGE
-", 335 }, { "PALMER
-", 336 }, { "PARK
-", 337 }, { "PARKER
-", 338 }, { "PARKS
-", 339 }, { "PARSONS
-", 340 }, { "PATEL
-", 341 }, { "PATTERSON
-", 342 }, { "PAUL
-", 343 }, { "PAYNE
-", 344 }, { "PEARSON
-", 345 }, { "PENA
-", 346 }, { "PEREZ
-", 347 }, { "PERKINS
-", 348 }, { "PERRY
-", 349 }, { "PERSON
-", 350 }, { "PETERS
-", 351 }, { "PETERSON
-", 352 }, { "PHAM
-", 353 }, { "PHILLIPS
-", 354 }, { "PIERCE
-", 355 }, { "PORTER
-", 356 }, { "POTTER
-", 357 }, { "POWELL
-", 358 }, { "POWERS
-", 359 }, { "PRICE
-", 360 }, { "QUINN
-", 361 }, { "RAMIREZ
-", 362 }, { "RAMOS
-", 363 }, { "RAMSEY
-", 364 }, { "RAY
-", 365 }, { "REED
-", 366 }, { "REESE
-", 367 }, { "REEVES
-", 368 }, { "REID
-", 369 }, { "REYES
-", 370 }, { "REYNOLDS
-", 371 }, { "RHODES
-", 372 }, { "RICE
-", 373 }, { "RICHARDS
-", 374 }, { "RICHARDSON
-", 375 }, { "RILEY
-", 376 }, { "RIOS
-", 377 }, { "RIVAS
-", 378 }, { "RIVERA
-", 379 }, { "ROBBINS
-", 380 }, { "ROBERTS
-", 381 }, { "ROBERTSON
-", 382 }, { "ROBINSON
-", 383 }, { "ROBLES
-", 384 }, { "RODGERS
-", 385 }, { "RODRIGUEZ
-", 386 }, { "ROGERS
-", 387 }, { "ROJAS
-", 388 }, { "ROMAN
-", 389 }, { "ROMERO
-", 390 }, { "ROSALES
-", 391 }, { "ROSE
-", 392 }, { "ROSS
-", 393 }, { "ROWE
-", 394 }, { "RUIZ
-", 395 }, { "RUSSELL
-", 396 }, { "RYAN
-", 397 }, { "SALAZAR
-", 398 }, { "SALINAS
-", 399 }, { "SANCHEZ
-", 400 }, { "SANDERS
-", 401 }, { "SANDOVAL
-", 402 }, { "SANTIAGO
-", 403 }, { "SANTOS
-", 404 }, { "SAUNDERS
-", 405 }, { "SCHMIDT
-", 406 }, { "SCHNEIDER
-", 407 }, { "SCHROEDER
-", 408 }, { "SCHULTZ
-", 409 }, { "SCHWARTZ
-", 410 }, { "SCOTT
-", 411 }, { "SERRANO
-", 412 }, { "SHARP
-", 413 }, { "SHAW
-", 414 }, { "SHELTON
-", 415 }, { "SHERMAN
-", 416 }, { "SILVA
-", 417 }, { "SIMMONS
-", 418 }, { "SIMON
-", 419 }, { "SIMPSON
-", 420 }, { "SIMS
-", 421 }, { "SINGH
-", 422 }, { "SMITH
-", 423 }, { "SNYDER
-", 424 }, { "SOLIS
-", 425 }, { "SOTO
-", 426 }, { "SPENCER
-", 427 }, { "STANLEY
-", 428 }, { "STEELE
-", 429 }, { "STEPHENS
-", 430 }, { "STEVENS
-", 431 }, { "STEVENSON
-", 432 }, { "STEWART
-", 433 }, { "STONE
-", 434 }, { "STRICKLAND
-", 435 }, { "SULLIVAN
-", 436 }, { "SUTTON
-", 437 }, { "SWANSON
-", 438 }, { "TATE
-", 439 }, { "TAYLOR
-", 440 }, { "TERRY
-", 441 }, { "THOMAS
-", 442 }, { "THOMPSON
-", 443 }, { "THORNTON
-", 444 }, { "TODD
-", 445 }, { "TORRES
-", 446 }, { "TOWNSEND
-", 447 }, { "TRAN
-", 448 }, { "TRUJILLO
-", 449 }, { "TUCKER
-", 450 }, { "TURNER
-", 451 }, { "VALDEZ
-", 452 }, { "VALENCIA
-", 453 }, { "VARGAS
-", 454 }, { "VASQUEZ
-", 455 }, { "VAUGHN
-", 456 }, { "VAZQUEZ
-", 457 }, { "VEGA
-", 458 }, { "VELASQUEZ
-", 459 }, { "WADE
-", 460 }, { "WAGNER
-", 461 }, { "WALKER
-", 462 }, { "WALLACE
-", 463 }, { "WALSH
-", 464 }, { "WALTERS
-", 465 }, { "WALTON
-", 466 }, { "WANG
-", 467 }, { "WARD
-", 468 }, { "WARNER
-", 469 }, { "WARREN
-", 470 }, { "WASHINGTON
-", 471 }, { "WATERS
-", 472 }, { "WATKINS
-", 473 }, { "WATSON
-", 474 }, { "WATTS
-", 475 }, { "WEAVER
-", 476 }, { "WEBB
-", 477 }, { "WEBER
-", 478 }, { "WEBSTER
-", 479 }, { "WELCH
-", 480 }, { "WELLS
-", 481 }, { "WEST
-", 482 }, { "WHEELER
-", 483 }, { "WHITE
-", 484 }, { "WILLIAMS
-", 485 }, { "WILLIAMSON
-", 486 }, { "WILLIS
-", 487 }, { "WILSON
-", 488 }, { "WISE
-", 489 }, { "WOLF
-", 490 }, { "WOLFE
-", 491 }, { "WONG
-", 492 }, { "WOOD
-", 493 }, { "WOODS
-", 494 }, { "WRIGHT
-", 495 }, { "WU
-", 496 }, { "YANG
-", 497 }, { "YOUNG
-", 498 }, { "ZHANG
-", 499 }, { "ZIMMERMAN
-", 500 }};
+std::map<std::string, int> lookLast = {{ "ACOSTA", 0 }, 
+{ "ADAMS", 1 }, 
+{ "ADKINS", 2 }, 
+{ "AGUILAR", 3 }, 
+{ "AGUIRRE", 4 }, 
+{ "ALEXANDER", 5 }, 
+{ "ALLEN", 6 }, 
+{ "ALVARADO", 7 }, 
+{ "ALVAREZ", 8 }, 
+{ "ANDERSON", 9 }, 
+{ "ANDREWS", 10 }, 
+{ "ARMSTRONG", 11 }, 
+{ "ARNOLD", 12 }, 
+{ "AUSTIN", 13 }, 
+{ "AVILA", 14 }, 
+{ "AYALA", 15 }, 
+{ "BAILEY", 16 }, 
+{ "BAKER", 17 }, 
+{ "BALDWIN", 18 }, 
+{ "BANKS", 19 }, 
+{ "BARBER", 20 }, 
+{ "BARKER", 21 }, 
+{ "BARNES", 22 }, 
+{ "BARNETT", 23 }, 
+{ "BARRETT", 24 }, 
+{ "BARTON", 25 }, 
+{ "BATES", 26 }, 
+{ "BECK", 27 }, 
+{ "BECKER", 28 }, 
+{ "BELL", 29 }, 
+{ "BENNETT", 30 }, 
+{ "BENSON", 31 }, 
+{ "BERRY", 32 }, 
+{ "BISHOP", 33 }, 
+{ "BLACK", 34 }, 
+{ "BLAIR", 35 }, 
+{ "BLAKE", 36 }, 
+{ "BOWEN", 37 }, 
+{ "BOWMAN", 38 }, 
+{ "BOYD", 39 }, 
+{ "BRADLEY", 40 }, 
+{ "BRADY", 41 }, 
+{ "BREWER", 42 }, 
+{ "BROOKS", 43 }, 
+{ "BROWN", 44 }, 
+{ "BRYANT", 45 }, 
+{ "BURGESS", 46 }, 
+{ "BURKE", 47 }, 
+{ "BURNS", 48 }, 
+{ "BURTON", 49 }, 
+{ "BUSH", 50 }, 
+{ "BUTLER", 51 }, 
+{ "BYRD", 52 }, 
+{ "CABRERA", 53 }, 
+{ "CALDERON", 54 }, 
+{ "CALDWELL", 55 }, 
+{ "CAMACHO", 56 }, 
+{ "CAMPBELL", 57 }, 
+{ "CAMPOS", 58 }, 
+{ "CANNON", 59 }, 
+{ "CARDENAS", 60 }, 
+{ "CARLSON", 61 }, 
+{ "CARPENTER", 62 }, 
+{ "CARR", 63 }, 
+{ "CARRILLO", 64 }, 
+{ "CARROLL", 65 }, 
+{ "CARTER", 66 }, 
+{ "CASTANEDA", 67 }, 
+{ "CASTILLO", 68 }, 
+{ "CASTRO", 69 }, 
+{ "CERVANTES", 70 }, 
+{ "CHAMBERS", 71 }, 
+{ "CHAN", 72 }, 
+{ "CHANDLER", 73 }, 
+{ "CHANG", 74 }, 
+{ "CHAPMAN", 75 }, 
+{ "CHAVEZ", 76 }, 
+{ "CHEN", 77 }, 
+{ "CHRISTENSEN", 78 }, 
+{ "CLARK", 79 }, 
+{ "CLARKE", 80 }, 
+{ "COHEN", 81 }, 
+{ "COLE", 82 }, 
+{ "COLEMAN", 83 }, 
+{ "COLLINS", 84 }, 
+{ "COLON", 85 }, 
+{ "CONTRERAS", 86 }, 
+{ "COOK", 87 }, 
+{ "COOPER", 88 }, 
+{ "CORTEZ", 89 }, 
+{ "COX", 90 }, 
+{ "CRAIG", 91 }, 
+{ "CRAWFORD", 92 }, 
+{ "CROSS", 93 }, 
+{ "CRUZ", 94 }, 
+{ "CUMMINGS", 95 }, 
+{ "CUNNINGHAM", 96 }, 
+{ "CURRY", 97 }, 
+{ "CURTIS", 98 }, 
+{ "DANIEL", 99 }, 
+{ "DANIELS", 100 }, 
+{ "DAVIDSON", 101 }, 
+{ "DAVIS", 102 }, 
+{ "DAWSON", 103 }, 
+{ "DAY", 104 }, 
+{ "DEAN", 105 }, 
+{ "DELACRUZ", 106 }, 
+{ "DELEON", 107 }, 
+{ "DELGADO", 108 }, 
+{ "DENNIS", 109 }, 
+{ "DIAZ", 110 }, 
+{ "DIXON", 111 }, 
+{ "DOMINGUEZ", 112 }, 
+{ "DOUGLAS", 113 }, 
+{ "DOYLE", 114 }, 
+{ "DUNCAN", 115 }, 
+{ "DUNN", 116 }, 
+{ "DURAN", 117 }, 
+{ "EDWARDS", 118 }, 
+{ "ELLIOTT", 119 }, 
+{ "ELLIS", 120 }, 
+{ "ERICKSON", 121 }, 
+{ "ESPINOZA", 122 }, 
+{ "ESTRADA", 123 }, 
+{ "EVANS", 124 }, 
+{ "FARMER", 125 }, 
+{ "FERGUSON", 126 }, 
+{ "FERNANDEZ", 127 }, 
+{ "FIELDS", 128 }, 
+{ "FIGUEROA", 129 }, 
+{ "FISCHER", 130 }, 
+{ "FISHER", 131 }, 
+{ "FITZGERALD", 132 }, 
+{ "FLEMING", 133 }, 
+{ "FLETCHER", 134 }, 
+{ "FLORES", 135 }, 
+{ "FORD", 136 }, 
+{ "FOSTER", 137 }, 
+{ "FOWLER", 138 }, 
+{ "FOX", 139 }, 
+{ "FRANCIS", 140 }, 
+{ "FRANCO", 141 }, 
+{ "FRANK", 142 }, 
+{ "FRANKLIN", 143 }, 
+{ "FRAZIER", 144 }, 
+{ "FREEMAN", 145 }, 
+{ "FUENTES", 146 }, 
+{ "FULLER", 147 }, 
+{ "GALLAGHER", 148 }, 
+{ "GALLEGOS", 149 }, 
+{ "GARCIA", 150 }, 
+{ "GARDNER", 151 }, 
+{ "GARNER", 152 }, 
+{ "GARRETT", 153 }, 
+{ "GARZA", 154 }, 
+{ "GEORGE", 155 }, 
+{ "GIBSON", 156 }, 
+{ "GILBERT", 157 }, 
+{ "GILL", 158 }, 
+{ "GOMEZ", 159 }, 
+{ "GONZALES", 160 }, 
+{ "GONZALEZ", 161 }, 
+{ "GOODMAN", 162 }, 
+{ "GOODWIN", 163 }, 
+{ "GORDON", 164 }, 
+{ "GRAHAM", 165 }, 
+{ "GRANT", 166 }, 
+{ "GRAVES", 167 }, 
+{ "GRAY", 168 }, 
+{ "GREEN", 169 }, 
+{ "GREENE", 170 }, 
+{ "GREGORY", 171 }, 
+{ "GRIFFIN", 172 }, 
+{ "GRIFFITH", 173 }, 
+{ "GROSS", 174 }, 
+{ "GUERRA", 175 }, 
+{ "GUERRERO", 176 }, 
+{ "GUTIERREZ", 177 }, 
+{ "GUZMAN", 178 }, 
+{ "HAIL", 179 }, 
+{ "HALE", 180 }, 
+{ "HALL", 181 }, 
+{ "HAMILTON", 182 }, 
+{ "HAMMOND", 183 }, 
+{ "HAMPTON", 184 }, 
+{ "HANSEN", 185 }, 
+{ "HANSON", 186 }, 
+{ "HARDY", 187 }, 
+{ "HARMON", 188 }, 
+{ "HARPER", 189 }, 
+{ "HARRINGTON", 190 }, 
+{ "HARRIS", 191 }, 
+{ "HARRISON", 192 }, 
+{ "HART", 193 }, 
+{ "HARVEY", 194 }, 
+{ "HAWKINS", 195 }, 
+{ "HAYES", 196 }, 
+{ "HAYNES", 197 }, 
+{ "HENDERSON", 198 }, 
+{ "HENRY", 199 }, 
+{ "HERNANDEZ", 200 }, 
+{ "HERRERA", 201 }, 
+{ "HICKS", 202 }, 
+{ "HIGGINS", 203 }, 
+{ "HILL", 204 }, 
+{ "HINES", 205 }, 
+{ "HODGES", 206 }, 
+{ "HOFFMAN", 207 }, 
+{ "HOLLAND", 208 }, 
+{ "HOLMES", 209 }, 
+{ "HOLT", 210 }, 
+{ "HOPKINS", 211 }, 
+{ "HORTON", 212 }, 
+{ "HOWARD", 213 }, 
+{ "HOWELL", 214 }, 
+{ "HUANG", 215 }, 
+{ "HUBBARD", 216 }, 
+{ "HUDSON", 217 }, 
+{ "HUGHES", 218 }, 
+{ "HUNT", 219 }, 
+{ "HUNTER", 220 }, 
+{ "INGRAM", 221 }, 
+{ "JACKSON", 222 }, 
+{ "JACOBS", 223 }, 
+{ "JAMES", 224 }, 
+{ "JENKINS", 225 }, 
+{ "JENNINGS", 226 }, 
+{ "JENSEN", 227 }, 
+{ "JIMENEZ", 228 }, 
+{ "JOHNSON", 229 }, 
+{ "JOHNSTON", 230 }, 
+{ "JONES", 231 }, 
+{ "JORDAN", 232 }, 
+{ "JOSEPH", 233 }, 
+{ "JUAREZ", 234 }, 
+{ "KELLER", 235 }, 
+{ "KELLEY", 236 }, 
+{ "KELLY", 237 }, 
+{ "KENNEDY", 238 }, 
+{ "KHAN", 239 }, 
+{ "KIM", 240 }, 
+{ "KING", 241 }, 
+{ "KLEIN", 242 }, 
+{ "KNIGHT", 243 }, 
+{ "LAMBERT", 244 }, 
+{ "LANE", 245 }, 
+{ "LARA", 246 }, 
+{ "LARSON", 247 }, 
+{ "LAWRENCE", 248 }, 
+{ "LAWSON", 249 }, 
+{ "LE", 250 }, 
+{ "LEE", 251 }, 
+{ "LEON", 252 }, 
+{ "LEONARD", 253 }, 
+{ "LEWIS", 254 }, 
+{ "LI", 255 }, 
+{ "LIN", 256 }, 
+{ "LITTLE", 257 }, 
+{ "LIU", 258 }, 
+{ "LOGAN", 259 }, 
+{ "LONG", 260 }, 
+{ "LOPEZ", 261 }, 
+{ "LOVE", 262 }, 
+{ "LOWE", 263 }, 
+{ "LUCAS", 264 }, 
+{ "LUNA", 265 }, 
+{ "LYNCH", 266 }, 
+{ "LYONS", 267 }, 
+{ "MACK", 268 }, 
+{ "MALDONADO", 269 }, 
+{ "MALONE", 270 }, 
+{ "MANN", 271 }, 
+{ "MANNING", 272 }, 
+{ "MARQUEZ", 273 }, 
+{ "MARSHALL", 274 }, 
+{ "MARTIN", 275 }, 
+{ "MARTINEZ", 276 }, 
+{ "MASON", 277 }, 
+{ "MATTHEWS", 278 }, 
+{ "MAXWELL", 279 }, 
+{ "MAY", 280 }, 
+{ "MCCARTHY", 281 }, 
+{ "MCCOY", 282 }, 
+{ "MCDANIEL", 283 }, 
+{ "MCDONALD", 284 }, 
+{ "MCGEE", 285 }, 
+{ "MCKINNEY", 286 }, 
+{ "MCLAUGHLIN", 287 }, 
+{ "MEDINA", 288 }, 
+{ "MEJIA", 289 }, 
+{ "MENDEZ", 290 }, 
+{ "MENDOZA", 291 }, 
+{ "MEYER", 292 }, 
+{ "MILES", 293 }, 
+{ "MILLER", 294 }, 
+{ "MILLS", 295 }, 
+{ "MIRANDA", 296 }, 
+{ "MITCHELL", 297 }, 
+{ "MOLINA", 298 }, 
+{ "MONTGOMERY", 299 }, 
+{ "MONTOYA", 300 }, 
+{ "MOORE", 301 }, 
+{ "MORALES", 302 }, 
+{ "MORAN", 303 }, 
+{ "MORENO", 304 }, 
+{ "MORGAN", 305 }, 
+{ "MORRIS", 306 }, 
+{ "MORRISON", 307 }, 
+{ "MOSS", 308 }, 
+{ "MULLINS", 309 }, 
+{ "MUNOZ", 310 }, 
+{ "MURPHY", 311 }, 
+{ "MURRAY", 312 }, 
+{ "MYERS", 313 }, 
+{ "NAVARRO", 314 }, 
+{ "NEAL", 315 }, 
+{ "NELSON", 316 }, 
+{ "NEWMAN", 317 }, 
+{ "NEWTON", 318 }, 
+{ "NGUYEN", 319 }, 
+{ "NICHOLS", 320 }, 
+{ "NORMAN", 321 }, 
+{ "NORRIS", 322 }, 
+{ "NUNEZ", 323 }, 
+{ "OBRIEN", 324 }, 
+{ "OCHOA", 325 }, 
+{ "OCONNOR", 326 }, 
+{ "OLIVER", 327 }, 
+{ "OLSON", 328 }, 
+{ "ORTEGA", 329 }, 
+{ "ORTIZ", 330 }, 
+{ "OWENS", 331 }, 
+{ "PACHECO", 332 }, 
+{ "PADILLA", 333 }, 
+{ "PAGE", 334 }, 
+{ "PALMER", 335 }, 
+{ "PARK", 336 }, 
+{ "PARKER", 337 }, 
+{ "PARKS", 338 }, 
+{ "PARSONS", 339 }, 
+{ "PATEL", 340 }, 
+{ "PATTERSON", 341 }, 
+{ "PAUL", 342 }, 
+{ "PAYNE", 343 }, 
+{ "PEARSON", 344 }, 
+{ "PENA", 345 }, 
+{ "PEREZ", 346 }, 
+{ "PERKINS", 347 }, 
+{ "PERRY", 348 }, 
+{ "PERSON", 349 }, 
+{ "PETERS", 350 }, 
+{ "PETERSON", 351 }, 
+{ "PHAM", 352 }, 
+{ "PHILLIPS", 353 }, 
+{ "PIERCE", 354 }, 
+{ "PORTER", 355 }, 
+{ "POTTER", 356 }, 
+{ "POWELL", 357 }, 
+{ "POWERS", 358 }, 
+{ "PRICE", 359 }, 
+{ "QUINN", 360 }, 
+{ "RAMIREZ", 361 }, 
+{ "RAMOS", 362 }, 
+{ "RAMSEY", 363 }, 
+{ "RAY", 364 }, 
+{ "REED", 365 }, 
+{ "REESE", 366 }, 
+{ "REEVES", 367 }, 
+{ "REID", 368 }, 
+{ "REYES", 369 }, 
+{ "REYNOLDS", 370 }, 
+{ "RHODES", 371 }, 
+{ "RICE", 372 }, 
+{ "RICHARDS", 373 }, 
+{ "RICHARDSON", 374 }, 
+{ "RILEY", 375 }, 
+{ "RIOS", 376 }, 
+{ "RIVAS", 377 }, 
+{ "RIVERA", 378 }, 
+{ "ROBBINS", 379 }, 
+{ "ROBERTS", 380 }, 
+{ "ROBERTSON", 381 }, 
+{ "ROBINSON", 382 }, 
+{ "ROBLES", 383 }, 
+{ "RODGERS", 384 }, 
+{ "RODRIGUEZ", 385 }, 
+{ "ROGERS", 386 }, 
+{ "ROJAS", 387 }, 
+{ "ROMAN", 388 }, 
+{ "ROMERO", 389 }, 
+{ "ROSALES", 390 }, 
+{ "ROSE", 391 }, 
+{ "ROSS", 392 }, 
+{ "ROWE", 393 }, 
+{ "RUIZ", 394 }, 
+{ "RUSSELL", 395 }, 
+{ "RYAN", 396 }, 
+{ "SALAZAR", 397 }, 
+{ "SALINAS", 398 }, 
+{ "SANCHEZ", 399 }, 
+{ "SANDERS", 400 }, 
+{ "SANDOVAL", 401 }, 
+{ "SANTIAGO", 402 }, 
+{ "SANTOS", 403 }, 
+{ "SAUNDERS", 404 }, 
+{ "SCHMIDT", 405 }, 
+{ "SCHNEIDER", 406 }, 
+{ "SCHROEDER", 407 }, 
+{ "SCHULTZ", 408 }, 
+{ "SCHWARTZ", 409 }, 
+{ "SCOTT", 410 }, 
+{ "SERRANO", 411 }, 
+{ "SHARP", 412 }, 
+{ "SHAW", 413 }, 
+{ "SHELTON", 414 }, 
+{ "SHERMAN", 415 }, 
+{ "SILVA", 416 }, 
+{ "SIMMONS", 417 }, 
+{ "SIMON", 418 }, 
+{ "SIMPSON", 419 }, 
+{ "SIMS", 420 }, 
+{ "SINGH", 421 }, 
+{ "SMITH", 422 }, 
+{ "SNYDER", 423 }, 
+{ "SOLIS", 424 }, 
+{ "SOTO", 425 }, 
+{ "SPENCER", 426 }, 
+{ "STANLEY", 427 }, 
+{ "STEELE", 428 }, 
+{ "STEPHENS", 429 }, 
+{ "STEVENS", 430 }, 
+{ "STEVENSON", 431 }, 
+{ "STEWART", 432 }, 
+{ "STONE", 433 }, 
+{ "STRICKLAND", 434 }, 
+{ "SULLIVAN", 435 }, 
+{ "SUTTON", 436 }, 
+{ "SWANSON", 437 }, 
+{ "TATE", 438 }, 
+{ "TAYLOR", 439 }, 
+{ "TERRY", 440 }, 
+{ "THOMAS", 441 }, 
+{ "THOMPSON", 442 }, 
+{ "THORNTON", 443 }, 
+{ "TODD", 444 }, 
+{ "TORRES", 445 }, 
+{ "TOWNSEND", 446 }, 
+{ "TRAN", 447 }, 
+{ "TRUJILLO", 448 }, 
+{ "TUCKER", 449 }, 
+{ "TURNER", 450 }, 
+{ "VALDEZ", 451 }, 
+{ "VALENCIA", 452 }, 
+{ "VARGAS", 453 }, 
+{ "VASQUEZ", 454 }, 
+{ "VAUGHN", 455 }, 
+{ "VAZQUEZ", 456 }, 
+{ "VEGA", 457 }, 
+{ "VELASQUEZ", 458 }, 
+{ "WADE", 459 }, 
+{ "WAGNER", 460 }, 
+{ "WALKER", 461 }, 
+{ "WALLACE", 462 }, 
+{ "WALSH", 463 }, 
+{ "WALTERS", 464 }, 
+{ "WALTON", 465 }, 
+{ "WANG", 466 }, 
+{ "WARD", 467 }, 
+{ "WARNER", 468 }, 
+{ "WARREN", 469 }, 
+{ "WASHINGTON", 470 }, 
+{ "WATERS", 471 }, 
+{ "WATKINS", 472 }, 
+{ "WATSON", 473 }, 
+{ "WATTS", 474 }, 
+{ "WEAVER", 475 }, 
+{ "WEBB", 476 }, 
+{ "WEBER", 477 }, 
+{ "WEBSTER", 478 }, 
+{ "WELCH", 479 }, 
+{ "WELLS", 480 }, 
+{ "WEST", 481 }, 
+{ "WHEELER", 482 }, 
+{ "WHITE", 483 }, 
+{ "WILLIAMS", 484 }, 
+{ "WILLIAMSON", 485 }, 
+{ "WILLIS", 486 }, 
+{ "WILSON", 487 }, 
+{ "WISE", 488 }, 
+{ "WOLF", 489 }, 
+{ "WOLFE", 490 }, 
+{ "WONG", 491 }, 
+{ "WOOD", 492 }, 
+{ "WOODS", 493 }, 
+{ "WRIGHT", 494 }, 
+{ "WU", 495 }, 
+{ "YANG", 496 }, 
+{ "YOUNG", 497 }, 
+{ "ZHANG", 498 }, 
+{ "ZIMMERMAN", 499 }};
 
-std::map<std::string, int> lookFirst = {{ "AALIYAH
-", 1 }, { "AARON
-", 2 }, { "ABEL
-", 3 }, { "ABIGAIL
-", 4 }, { "ABRAHAM
-", 5 }, { "ADALINE
-", 6 }, { "ADALYN
-", 7 }, { "ADALYNN
-", 8 }, { "ADAM
-", 9 }, { "ADDISON
-", 10 }, { "ADELINE
-", 11 }, { "ADELYN
-", 12 }, { "ADRIAN
-", 13 }, { "ADRIANA
-", 14 }, { "AIDAN
-", 15 }, { "AIDEN
-", 16 }, { "ALAINA
-", 17 }, { "ALAN
-", 18 }, { "ALANA
-", 19 }, { "ALAYNA
-", 20 }, { "ALEJANDRO
-", 21 }, { "ALEX
-", 22 }, { "ALEXA
-", 23 }, { "ALEXANDER
-", 24 }, { "ALEXANDRA
-", 25 }, { "ALEXIS
-", 26 }, { "ALICE
-", 27 }, { "ALINA
-", 28 }, { "ALIVIA
-", 29 }, { "ALIYAH
-", 30 }, { "ALLISON
-", 31 }, { "ALYSSA
-", 32 }, { "AMARA
-", 33 }, { "AMAYA
-", 34 }, { "AMELIA
-", 35 }, { "AMIR
-", 36 }, { "AMY
-", 37 }, { "ANA
-", 38 }, { "ANASTASIA
-", 39 }, { "ANDREA
-", 40 }, { "ANDRES
-", 41 }, { "ANDREW
-", 42 }, { "ANGEL
-", 43 }, { "ANGELA
-", 44 }, { "ANGELINA
-", 45 }, { "ANNA
-", 46 }, { "ANNABELLE
-", 47 }, { "ANTHONY
-", 48 }, { "ANTONIO
-", 49 }, { "ARABELLA
-", 50 }, { "ARIA
-", 51 }, { "ARIANA
-", 52 }, { "ARIANNA
-", 53 }, { "ARIEL
-", 54 }, { "ARTHUR
-", 55 }, { "ARYA
-", 56 }, { "ASHER
-", 57 }, { "ASHLEY
-", 58 }, { "ASHTON
-", 59 }, { "ATHENA
-", 60 }, { "AUBREE
-", 61 }, { "AUBREY
-", 62 }, { "AUDREY
-", 63 }, { "AUGUST
-", 64 }, { "AURORA
-", 65 }, { "AUSTIN
-", 66 }, { "AUTUMN
-", 67 }, { "AVA
-", 68 }, { "AVERY
-", 69 }, { "AXEL
-", 70 }, { "AYDEN
-", 71 }, { "AYLA
-", 72 }, { "BAILEY
-", 73 }, { "BARRETT
-", 74 }, { "BEAU
-", 75 }, { "BECKETT
-", 76 }, { "BELLA
-", 77 }, { "BENJAMIN
-", 78 }, { "BENNETT
-", 79 }, { "BENTLEY
-", 80 }, { "BLAKE
-", 81 }, { "BRADLEY
-", 82 }, { "BRADY
-", 83 }, { "BRANDON
-", 84 }, { "BRANTLEY
-", 85 }, { "BRAXTON
-", 86 }, { "BRAYDEN
-", 87 }, { "BRIAN
-", 88 }, { "BRIANNA
-", 89 }, { "BRIELLE
-", 90 }, { "BRODY
-", 91 }, { "BROOKE
-", 92 }, { "BROOKLYN
-", 93 }, { "BROOKLYNN
-", 94 }, { "BROOKS
-", 95 }, { "BRYAN
-", 96 }, { "BRYCE
-", 97 }, { "BRYNLEE
-", 98 }, { "BRYSON
-", 99 }, { "CADEN
-", 100 }, { "CALEB
-", 101 }, { "CALLIE
-", 102 }, { "CALVIN
-", 103 }, { "CAMDEN
-", 104 }, { "CAMERON
-", 105 }, { "CAMILA
-", 106 }, { "CARLOS
-", 107 }, { "CAROLINE
-", 108 }, { "CARSON
-", 109 }, { "CARTER
-", 110 }, { "CATHERINE
-", 111 }, { "CAYDEN
-", 112 }, { "CECILIA
-", 113 }, { "CHARLES
-", 114 }, { "CHARLIE
-", 115 }, { "CHARLOTTE
-", 116 }, { "CHASE
-", 117 }, { "CHLOE
-", 118 }, { "CHRISTIAN
-", 119 }, { "CHRISTOPHER
-", 120 }, { "CLAIRE
-", 121 }, { "CLARA
-", 122 }, { "CLAYTON
-", 123 }, { "COLE
-", 124 }, { "COLIN
-", 125 }, { "COLTON
-", 126 }, { "CONNOR
-", 127 }, { "COOPER
-", 128 }, { "CORA
-", 129 }, { "DAISY
-", 130 }, { "DAKOTA
-", 131 }, { "DALEYZA
-", 132 }, { "DAMIAN
-", 133 }, { "DANIEL
-", 134 }, { "DANIELA
-", 135 }, { "DAVID
-", 136 }, { "DAWSON
-", 137 }, { "DEAN
-", 138 }, { "DECLAN
-", 139 }, { "DELANEY
-", 140 }, { "DELILAH
-", 141 }, { "DEREK
-", 142 }, { "DESTINY
-", 143 }, { "DIANA
-", 144 }, { "DIEGO
-", 145 }, { "DOMINIC
-", 146 }, { "DYLAN
-", 147 }, { "EASTON
-", 148 }, { "EDEN
-", 149 }, { "EDWARD
-", 150 }, { "ELEANOR
-", 151 }, { "ELENA
-", 152 }, { "ELI
-", 153 }, { "ELIANA
-", 154 }, { "ELIAS
-", 155 }, { "ELIJAH
-", 156 }, { "ELISE
-", 157 }, { "ELIZA
-", 158 }, { "ELIZABETH
-", 159 }, { "ELLA
-", 160 }, { "ELLIANA
-", 161 }, { "ELLIE
-", 162 }, { "ELLIOT
-", 163 }, { "ELLIOTT
-", 164 }, { "ELOISE
-", 165 }, { "EMERSON
-", 166 }, { "EMERSYN
-", 167 }, { "EMERY
-", 168 }, { "EMILIA
-", 169 }, { "EMILIANO
-", 170 }, { "EMILY
-", 171 }, { "EMMA
-", 172 }, { "EMMANUEL
-", 173 }, { "EMMETT
-", 174 }, { "ERIC
-", 175 }, { "ESTHER
-", 176 }, { "ETHAN
-", 177 }, { "EVA
-", 178 }, { "EVAN
-", 179 }, { "EVELYN
-", 180 }, { "EVERETT
-", 181 }, { "EVERLY
-", 182 }, { "EZEKIEL
-", 183 }, { "EZRA
-", 184 }, { "FAITH
-", 185 }, { "FELIX
-", 186 }, { "FINLEY
-", 187 }, { "FINN
-", 188 }, { "FIONA
-", 189 }, { "GABRIEL
-", 190 }, { "GABRIELLA
-", 191 }, { "GAEL
-", 192 }, { "GAVIN
-", 193 }, { "GENESIS
-", 194 }, { "GENEVIEVE
-", 195 }, { "GEORGE
-", 196 }, { "GEORGIA
-", 197 }, { "GIANNA
-", 198 }, { "GIOVANNI
-", 199 }, { "GRACE
-", 200 }, { "GRACIE
-", 201 }, { "GRAHAM
-", 202 }, { "GRANT
-", 203 }, { "GRAYSON
-", 204 }, { "GREYSON
-", 205 }, { "GRIFFIN
-", 206 }, { "HADLEY
-", 207 }, { "HAILEY
-", 208 }, { "HANNAH
-", 209 }, { "HARLEY
-", 210 }, { "HARMONY
-", 211 }, { "HARPER
-", 212 }, { "HARRISON
-", 213 }, { "HAYDEN
-", 214 }, { "HAZEL
-", 215 }, { "HENRY
-", 216 }, { "HOLDEN
-", 217 }, { "HUDSON
-", 218 }, { "HUNTER
-", 219 }, { "IAN
-", 220 }, { "IRIS
-", 221 }, { "ISAAC
-", 222 }, { "ISABEL
-", 223 }, { "ISABELLA
-", 224 }, { "ISABELLE
-", 225 }, { "ISAIAH
-", 226 }, { "ISLA
-", 227 }, { "ISRAEL
-", 228 }, { "IVAN
-", 229 }, { "IVY
-", 230 }, { "JACE
-", 231 }, { "JACK
-", 232 }, { "JACKSON
-", 233 }, { "JACOB
-", 234 }, { "JADE
-", 235 }, { "JADEN
-", 236 }, { "JAKE
-", 237 }, { "JAMES
-", 238 }, { "JAMESON
-", 239 }, { "JASMINE
-", 240 }, { "JASON
-", 241 }, { "JASPER
-", 242 }, { "JAVIER
-", 243 }, { "JAX
-", 244 }, { "JAXON
-", 245 }, { "JAXSON
-", 246 }, { "JAYCE
-", 247 }, { "JAYDEN
-", 248 }, { "JAYLA
-", 249 }, { "JEREMIAH
-", 250 }, { "JEREMY
-", 251 }, { "JESSE
-", 252 }, { "JESSICA
-", 253 }, { "JESUS
-", 254 }, { "JOANNA
-", 255 }, { "JOCELYN
-", 256 }, { "JOEL
-", 257 }, { "JOHN
-", 258 }, { "JONAH
-", 259 }, { "JONATHAN
-", 260 }, { "JORDAN
-", 261 }, { "JORDYN
-", 262 }, { "JORGE
-", 263 }, { "JOSE
-", 264 }, { "JOSEPH
-", 265 }, { "JOSEPHINE
-", 266 }, { "JOSHUA
-", 267 }, { "JOSIAH
-", 268 }, { "JOSIE
-", 269 }, { "JOSUE
-", 270 }, { "JUAN
-", 271 }, { "JUDAH
-", 272 }, { "JUDE
-", 273 }, { "JULIA
-", 274 }, { "JULIAN
-", 275 }, { "JULIANA
-", 276 }, { "JULIANNA
-", 277 }, { "JULIET
-", 278 }, { "JULIETTE
-", 279 }, { "JUNE
-", 280 }, { "JUSTIN
-", 281 }, { "KADEN
-", 282 }, { "KAI
-", 283 }, { "KAIDEN
-", 284 }, { "KALEB
-", 285 }, { "KARTER
-", 286 }, { "KATHERINE
-", 287 }, { "KAYDEN
-", 288 }, { "KAYLA
-", 289 }, { "KAYLEE
-", 290 }, { "KENDALL
-", 291 }, { "KENNEDY
-", 292 }, { "KENNETH
-", 293 }, { "KEVIN
-", 294 }, { "KHLOE
-", 295 }, { "KILLIAN
-", 296 }, { "KIMBERLY
-", 297 }, { "KING
-", 298 }, { "KINGSTON
-", 299 }, { "KINSLEY
-", 300 }, { "KNOX
-", 301 }, { "KYLE
-", 302 }, { "KYLIE
-", 303 }, { "KYRIE
-", 304 }, { "LAILA
-", 305 }, { "LANDON
-", 306 }, { "LAUREN
-", 307 }, { "LAYLA
-", 308 }, { "LEAH
-", 309 }, { "LEILA
-", 310 }, { "LEILANI
-", 311 }, { "LEO
-", 312 }, { "LEON
-", 313 }, { "LEONARDO
-", 314 }, { "LEVI
-", 315 }, { "LIAM
-", 316 }, { "LILA
-", 317 }, { "LILIANA
-", 318 }, { "LILLIAN
-", 319 }, { "LILLY
-", 320 }, { "LILY
-", 321 }, { "LINCOLN
-", 322 }, { "LOGAN
-", 323 }, { "LOLA
-", 324 }, { "LONDON
-", 325 }, { "LONDYN
-", 326 }, { "LORENZO
-", 327 }, { "LUCA
-", 328 }, { "LUCAS
-", 329 }, { "LUCIA
-", 330 }, { "LUCY
-", 331 }, { "LUIS
-", 332 }, { "LUKAS
-", 333 }, { "LUKE
-", 334 }, { "LUNA
-", 335 }, { "LYDIA
-", 336 }, { "LYLA
-", 337 }, { "MACKENZIE
-", 338 }, { "MADDOX
-", 339 }, { "MADELINE
-", 340 }, { "MADELYN
-", 341 }, { "MADISON
-", 342 }, { "MAGGIE
-", 343 }, { "MAKAYLA
-", 344 }, { "MALACHI
-", 345 }, { "MALIA
-", 346 }, { "MARCUS
-", 347 }, { "MARGARET
-", 348 }, { "MARIA
-", 349 }, { "MARIAH
-", 350 }, { "MARK
-", 351 }, { "MARLEY
-", 352 }, { "MARY
-", 353 }, { "MASON
-", 354 }, { "MATEO
-", 355 }, { "MATIAS
-", 356 }, { "MATTEO
-", 357 }, { "MATTHEW
-", 358 }, { "MAVERICK
-", 359 }, { "MAX
-", 360 }, { "MAXIMUS
-", 361 }, { "MAXWELL
-", 362 }, { "MAYA
-", 363 }, { "MCKENZIE
-", 364 }, { "MELANIE
-", 365 }, { "MELODY
-", 366 }, { "MESSIAH
-", 367 }, { "MIA
-", 368 }, { "MICAH
-", 369 }, { "MICHAEL
-", 370 }, { "MICHELLE
-", 371 }, { "MIGUEL
-", 372 }, { "MILA
-", 373 }, { "MILES
-", 374 }, { "MILO
-", 375 }, { "MOLLY
-", 376 }, { "MORGAN
-", 377 }, { "MYA
-", 378 }, { "MYLES
-", 379 }, { "NAOMI
-", 380 }, { "NATALIA
-", 381 }, { "NATALIE
-", 382 }, { "NATHAN
-", 383 }, { "NATHANIEL
-", 384 }, { "NEVAEH
-", 385 }, { "NICHOLAS
-", 386 }, { "NICOLAS
-", 387 }, { "NICOLE
-", 388 }, { "NOAH
-", 389 }, { "NOELLE
-", 390 }, { "NOLAN
-", 391 }, { "NORA
-", 392 }, { "NORAH
-", 393 }, { "NOVA
-", 394 }, { "OLIVER
-", 395 }, { "OLIVIA
-", 396 }, { "OMAR
-", 397 }, { "OSCAR
-", 398 }, { "OWEN
-", 399 }, { "PAIGE
-", 400 }, { "PAISLEY
-", 401 }, { "PARKER
-", 402 }, { "PATRICK
-", 403 }, { "PAUL
-", 404 }, { "PAXTON
-", 405 }, { "PAYTON
-", 406 }, { "PENELOPE
-", 407 }, { "PETER
-", 408 }, { "PEYTON
-", 409 }, { "PIPER
-", 410 }, { "PRESLEY
-", 411 }, { "PRESTON
-", 412 }, { "QUINN
-", 413 }, { "RACHEL
-", 414 }, { "RAELYNN
-", 415 }, { "REAGAN
-", 416 }, { "REBECCA
-", 417 }, { "REESE
-", 418 }, { "REMI
-", 419 }, { "REMINGTON
-", 420 }, { "RHETT
-", 421 }, { "RICHARD
-", 422 }, { "RILEY
-", 423 }, { "RIVER
-", 424 }, { "ROBERT
-", 425 }, { "ROMAN
-", 426 }, { "ROSALIE
-", 427 }, { "ROSE
-", 428 }, { "ROWAN
-", 429 }, { "RUBY
-", 430 }, { "RYAN
-", 431 }, { "RYDER
-", 432 }, { "RYKER
-", 433 }, { "RYLEE
-", 434 }, { "RYLEIGH
-", 435 }, { "SADIE
-", 436 }, { "SAMANTHA
-", 437 }, { "SAMUEL
-", 438 }, { "SANTIAGO
-", 439 }, { "SARA
-", 440 }, { "SARAH
-", 441 }, { "SAVANNAH
-", 442 }, { "SAWYER
-", 443 }, { "SCARLETT
-", 444 }, { "SEBASTIAN
-", 445 }, { "SELENA
-", 446 }, { "SERENITY
-", 447 }, { "SIENNA
-", 448 }, { "SILAS
-", 449 }, { "SKYLAR
-", 450 }, { "SLOANE
-", 451 }, { "SOFIA
-", 452 }, { "SOPHIA
-", 453 }, { "SOPHIE
-", 454 }, { "STELLA
-", 455 }, { "STEVEN
-", 456 }, { "SUMMER
-", 457 }, { "SYDNEY
-", 458 }, { "TAYLOR
-", 459 }, { "TEAGAN
-", 460 }, { "TESSA
-", 461 }, { "THEODORE
-", 462 }, { "THIAGO
-", 463 }, { "THOMAS
-", 464 }, { "TIMOTHY
-", 465 }, { "TRINITY
-", 466 }, { "TRISTAN
-", 467 }, { "TUCKER
-", 468 }, { "TYLER
-", 469 }, { "VALENTINA
-", 470 }, { "VALERIA
-", 471 }, { "VALERIE
-", 472 }, { "VANESSA
-", 473 }, { "VICTOR
-", 474 }, { "VICTORIA
-", 475 }, { "VINCENT
-", 476 }, { "VIOLET
-", 477 }, { "VIVIAN
-", 478 }, { "WAYLON
-", 479 }, { "WESLEY
-", 480 }, { "WESTON
-", 481 }, { "WILLIAM
-", 482 }, { "WILLOW
-", 483 }, { "WYATT
-", 484 }, { "XANDER
-", 485 }, { "XAVIER
-", 486 }, { "XIMENA
-", 487 }, { "ZACHARY
-", 488 }, { "ZANDER
-", 489 }, { "ZANE
-", 490 }, { "ZAYDEN
-", 491 }, { "ZION
-", 492 }, { "ZOE
-", 493 }, { "ZOEY
-", 494 }}
+std::map<std::string, int> lookFirst = {{ "AALIYAH", 0 }, 
+{ "AARON", 1 }, 
+{ "ABEL", 2 }, 
+{ "ABIGAIL", 3 }, 
+{ "ABRAHAM", 4 }, 
+{ "ADALINE", 5 }, 
+{ "ADALYN", 6 }, 
+{ "ADALYNN", 7 }, 
+{ "ADAM", 8 }, 
+{ "ADDISON", 9 }, 
+{ "ADELINE", 10 }, 
+{ "ADELYN", 11 }, 
+{ "ADRIAN", 12 }, 
+{ "ADRIANA", 13 }, 
+{ "AIDAN", 14 }, 
+{ "AIDEN", 15 }, 
+{ "ALAINA", 16 }, 
+{ "ALAN", 17 }, 
+{ "ALANA", 18 }, 
+{ "ALAYNA", 19 }, 
+{ "ALEJANDRO", 20 }, 
+{ "ALEX", 21 }, 
+{ "ALEXA", 22 }, 
+{ "ALEXANDER", 23 }, 
+{ "ALEXANDRA", 24 }, 
+{ "ALEXIS", 25 }, 
+{ "ALICE", 26 }, 
+{ "ALINA", 27 }, 
+{ "ALIVIA", 28 }, 
+{ "ALIYAH", 29 }, 
+{ "ALLISON", 30 }, 
+{ "ALYSSA", 31 }, 
+{ "AMARA", 32 }, 
+{ "AMAYA", 33 }, 
+{ "AMELIA", 34 }, 
+{ "AMIR", 35 }, 
+{ "AMY", 36 }, 
+{ "ANA", 37 }, 
+{ "ANASTASIA", 38 }, 
+{ "ANDREA", 39 }, 
+{ "ANDRES", 40 }, 
+{ "ANDREW", 41 }, 
+{ "ANGEL", 42 }, 
+{ "ANGELA", 43 }, 
+{ "ANGELINA", 44 }, 
+{ "ANNA", 45 }, 
+{ "ANNABELLE", 46 }, 
+{ "ANTHONY", 47 }, 
+{ "ANTONIO", 48 }, 
+{ "ARABELLA", 49 }, 
+{ "ARIA", 50 }, 
+{ "ARIANA", 51 }, 
+{ "ARIANNA", 52 }, 
+{ "ARIEL", 53 }, 
+{ "ARTHUR", 54 }, 
+{ "ARYA", 55 }, 
+{ "ASHER", 56 }, 
+{ "ASHLEY", 57 }, 
+{ "ASHTON", 58 }, 
+{ "ATHENA", 59 }, 
+{ "AUBREE", 60 }, 
+{ "AUBREY", 61 }, 
+{ "AUDREY", 62 }, 
+{ "AUGUST", 63 }, 
+{ "AURORA", 64 }, 
+{ "AUSTIN", 65 }, 
+{ "AUTUMN", 66 }, 
+{ "AVA", 67 }, 
+{ "AVERY", 68 }, 
+{ "AXEL", 69 }, 
+{ "AYDEN", 70 }, 
+{ "AYLA", 71 }, 
+{ "BAILEY", 72 }, 
+{ "BARRETT", 73 }, 
+{ "BEAU", 74 }, 
+{ "BECKETT", 75 }, 
+{ "BELLA", 76 }, 
+{ "BENJAMIN", 77 }, 
+{ "BENNETT", 78 }, 
+{ "BENTLEY", 79 }, 
+{ "BLAKE", 80 }, 
+{ "BRADLEY", 81 }, 
+{ "BRADY", 82 }, 
+{ "BRANDON", 83 }, 
+{ "BRANTLEY", 84 }, 
+{ "BRAXTON", 85 }, 
+{ "BRAYDEN", 86 }, 
+{ "BRIAN", 87 }, 
+{ "BRIANNA", 88 }, 
+{ "BRIELLE", 89 }, 
+{ "BRODY", 90 }, 
+{ "BROOKE", 91 }, 
+{ "BROOKLYN", 92 }, 
+{ "BROOKLYNN", 93 }, 
+{ "BROOKS", 94 }, 
+{ "BRYAN", 95 }, 
+{ "BRYCE", 96 }, 
+{ "BRYNLEE", 97 }, 
+{ "BRYSON", 98 }, 
+{ "CADEN", 99 }, 
+{ "CALEB", 100 }, 
+{ "CALLIE", 101 }, 
+{ "CALVIN", 102 }, 
+{ "CAMDEN", 103 }, 
+{ "CAMERON", 104 }, 
+{ "CAMILA", 105 }, 
+{ "CARLOS", 106 }, 
+{ "CAROLINE", 107 }, 
+{ "CARSON", 108 }, 
+{ "CARTER", 109 }, 
+{ "CATHERINE", 110 }, 
+{ "CAYDEN", 111 }, 
+{ "CECILIA", 112 }, 
+{ "CHARLES", 113 }, 
+{ "CHARLIE", 114 }, 
+{ "CHARLOTTE", 115 }, 
+{ "CHASE", 116 }, 
+{ "CHLOE", 117 }, 
+{ "CHRISTIAN", 118 }, 
+{ "CHRISTOPHER", 119 }, 
+{ "CLAIRE", 120 }, 
+{ "CLARA", 121 }, 
+{ "CLAYTON", 122 }, 
+{ "COLE", 123 }, 
+{ "COLIN", 124 }, 
+{ "COLTON", 125 }, 
+{ "CONNOR", 126 }, 
+{ "COOPER", 127 }, 
+{ "CORA", 128 }, 
+{ "DAISY", 129 }, 
+{ "DAKOTA", 130 }, 
+{ "DALEYZA", 131 }, 
+{ "DAMIAN", 132 }, 
+{ "DANIEL", 133 }, 
+{ "DANIELA", 134 }, 
+{ "DAVID", 135 }, 
+{ "DAWSON", 136 }, 
+{ "DEAN", 137 }, 
+{ "DECLAN", 138 }, 
+{ "DELANEY", 139 }, 
+{ "DELILAH", 140 }, 
+{ "DEREK", 141 }, 
+{ "DESTINY", 142 }, 
+{ "DIANA", 143 }, 
+{ "DIEGO", 144 }, 
+{ "DOMINIC", 145 }, 
+{ "DYLAN", 146 }, 
+{ "EASTON", 147 }, 
+{ "EDEN", 148 }, 
+{ "EDWARD", 149 }, 
+{ "ELEANOR", 150 }, 
+{ "ELENA", 151 }, 
+{ "ELI", 152 }, 
+{ "ELIANA", 153 }, 
+{ "ELIAS", 154 }, 
+{ "ELIJAH", 155 }, 
+{ "ELISE", 156 }, 
+{ "ELIZA", 157 }, 
+{ "ELIZABETH", 158 }, 
+{ "ELLA", 159 }, 
+{ "ELLIANA", 160 }, 
+{ "ELLIE", 161 }, 
+{ "ELLIOT", 162 }, 
+{ "ELLIOTT", 163 }, 
+{ "ELOISE", 164 }, 
+{ "EMERSON", 165 }, 
+{ "EMERSYN", 166 }, 
+{ "EMERY", 167 }, 
+{ "EMILIA", 168 }, 
+{ "EMILIANO", 169 }, 
+{ "EMILY", 170 }, 
+{ "EMMA", 171 }, 
+{ "EMMANUEL", 172 }, 
+{ "EMMETT", 173 }, 
+{ "ERIC", 174 }, 
+{ "ESTHER", 175 }, 
+{ "ETHAN", 176 }, 
+{ "EVA", 177 }, 
+{ "EVAN", 178 }, 
+{ "EVELYN", 179 }, 
+{ "EVERETT", 180 }, 
+{ "EVERLY", 181 }, 
+{ "EZEKIEL", 182 }, 
+{ "EZRA", 183 }, 
+{ "FAITH", 184 }, 
+{ "FELIX", 185 }, 
+{ "FINLEY", 186 }, 
+{ "FINN", 187 }, 
+{ "FIONA", 188 }, 
+{ "GABRIEL", 189 }, 
+{ "GABRIELLA", 190 }, 
+{ "GAEL", 191 }, 
+{ "GAVIN", 192 }, 
+{ "GENESIS", 193 }, 
+{ "GENEVIEVE", 194 }, 
+{ "GEORGE", 195 }, 
+{ "GEORGIA", 196 }, 
+{ "GIANNA", 197 }, 
+{ "GIOVANNI", 198 }, 
+{ "GRACE", 199 }, 
+{ "GRACIE", 200 }, 
+{ "GRAHAM", 201 }, 
+{ "GRANT", 202 }, 
+{ "GRAYSON", 203 }, 
+{ "GREYSON", 204 }, 
+{ "GRIFFIN", 205 }, 
+{ "HADLEY", 206 }, 
+{ "HAILEY", 207 }, 
+{ "HANNAH", 208 }, 
+{ "HARLEY", 209 }, 
+{ "HARMONY", 210 }, 
+{ "HARPER", 211 }, 
+{ "HARRISON", 212 }, 
+{ "HAYDEN", 213 }, 
+{ "HAZEL", 214 }, 
+{ "HENRY", 215 }, 
+{ "HOLDEN", 216 }, 
+{ "HUDSON", 217 }, 
+{ "HUNTER", 218 }, 
+{ "IAN", 219 }, 
+{ "IRIS", 220 }, 
+{ "ISAAC", 221 }, 
+{ "ISABEL", 222 }, 
+{ "ISABELLA", 223 }, 
+{ "ISABELLE", 224 }, 
+{ "ISAIAH", 225 }, 
+{ "ISLA", 226 }, 
+{ "ISRAEL", 227 }, 
+{ "IVAN", 228 }, 
+{ "IVY", 229 }, 
+{ "JACE", 230 }, 
+{ "JACK", 231 }, 
+{ "JACKSON", 232 }, 
+{ "JACOB", 233 }, 
+{ "JADE", 234 }, 
+{ "JADEN", 235 }, 
+{ "JAKE", 236 }, 
+{ "JAMES", 237 }, 
+{ "JAMESON", 238 }, 
+{ "JASMINE", 239 }, 
+{ "JASON", 240 }, 
+{ "JASPER", 241 }, 
+{ "JAVIER", 242 }, 
+{ "JAX", 243 }, 
+{ "JAXON", 244 }, 
+{ "JAXSON", 245 }, 
+{ "JAYCE", 246 }, 
+{ "JAYDEN", 247 }, 
+{ "JAYLA", 248 }, 
+{ "JEREMIAH", 249 }, 
+{ "JEREMY", 250 }, 
+{ "JESSE", 251 }, 
+{ "JESSICA", 252 }, 
+{ "JESUS", 253 }, 
+{ "JOANNA", 254 }, 
+{ "JOCELYN", 255 }, 
+{ "JOEL", 256 }, 
+{ "JOHN", 257 }, 
+{ "JONAH", 258 }, 
+{ "JONATHAN", 259 }, 
+{ "JORDAN", 260 }, 
+{ "JORDYN", 261 }, 
+{ "JORGE", 262 }, 
+{ "JOSE", 263 }, 
+{ "JOSEPH", 264 }, 
+{ "JOSEPHINE", 265 }, 
+{ "JOSHUA", 266 }, 
+{ "JOSIAH", 267 }, 
+{ "JOSIE", 268 }, 
+{ "JOSUE", 269 }, 
+{ "JUAN", 270 }, 
+{ "JUDAH", 271 }, 
+{ "JUDE", 272 }, 
+{ "JULIA", 273 }, 
+{ "JULIAN", 274 }, 
+{ "JULIANA", 275 }, 
+{ "JULIANNA", 276 }, 
+{ "JULIET", 277 }, 
+{ "JULIETTE", 278 }, 
+{ "JUNE", 279 }, 
+{ "JUSTIN", 280 }, 
+{ "KADEN", 281 }, 
+{ "KAI", 282 }, 
+{ "KAIDEN", 283 }, 
+{ "KALEB", 284 }, 
+{ "KARTER", 285 }, 
+{ "KATHERINE", 286 }, 
+{ "KAYDEN", 287 }, 
+{ "KAYLA", 288 }, 
+{ "KAYLEE", 289 }, 
+{ "KENDALL", 290 }, 
+{ "KENNEDY", 291 }, 
+{ "KENNETH", 292 }, 
+{ "KEVIN", 293 }, 
+{ "KHLOE", 294 }, 
+{ "KILLIAN", 295 }, 
+{ "KIMBERLY", 296 }, 
+{ "KING", 297 }, 
+{ "KINGSTON", 298 }, 
+{ "KINSLEY", 299 }, 
+{ "KNOX", 300 }, 
+{ "KYLE", 301 }, 
+{ "KYLIE", 302 }, 
+{ "KYRIE", 303 }, 
+{ "LAILA", 304 }, 
+{ "LANDON", 305 }, 
+{ "LAUREN", 306 }, 
+{ "LAYLA", 307 }, 
+{ "LEAH", 308 }, 
+{ "LEILA", 309 }, 
+{ "LEILANI", 310 }, 
+{ "LEO", 311 }, 
+{ "LEON", 312 }, 
+{ "LEONARDO", 313 }, 
+{ "LEVI", 314 }, 
+{ "LIAM", 315 }, 
+{ "LILA", 316 }, 
+{ "LILIANA", 317 }, 
+{ "LILLIAN", 318 }, 
+{ "LILLY", 319 }, 
+{ "LILY", 320 }, 
+{ "LINCOLN", 321 }, 
+{ "LOGAN", 322 }, 
+{ "LOLA", 323 }, 
+{ "LONDON", 324 }, 
+{ "LONDYN", 325 }, 
+{ "LORENZO", 326 }, 
+{ "LUCA", 327 }, 
+{ "LUCAS", 328 }, 
+{ "LUCIA", 329 }, 
+{ "LUCY", 330 }, 
+{ "LUIS", 331 }, 
+{ "LUKAS", 332 }, 
+{ "LUKE", 333 }, 
+{ "LUNA", 334 }, 
+{ "LYDIA", 335 }, 
+{ "LYLA", 336 }, 
+{ "MACKENZIE", 337 }, 
+{ "MADDOX", 338 }, 
+{ "MADELINE", 339 }, 
+{ "MADELYN", 340 }, 
+{ "MADISON", 341 }, 
+{ "MAGGIE", 342 }, 
+{ "MAKAYLA", 343 }, 
+{ "MALACHI", 344 }, 
+{ "MALIA", 345 }, 
+{ "MARCUS", 346 }, 
+{ "MARGARET", 347 }, 
+{ "MARIA", 348 }, 
+{ "MARIAH", 349 }, 
+{ "MARK", 350 }, 
+{ "MARLEY", 351 }, 
+{ "MARY", 352 }, 
+{ "MASON", 353 }, 
+{ "MATEO", 354 }, 
+{ "MATIAS", 355 }, 
+{ "MATTEO", 356 }, 
+{ "MATTHEW", 357 }, 
+{ "MAVERICK", 358 }, 
+{ "MAX", 359 }, 
+{ "MAXIMUS", 360 }, 
+{ "MAXWELL", 361 }, 
+{ "MAYA", 362 }, 
+{ "MCKENZIE", 363 }, 
+{ "MELANIE", 364 }, 
+{ "MELODY", 365 }, 
+{ "MESSIAH", 366 }, 
+{ "MIA", 367 }, 
+{ "MICAH", 368 }, 
+{ "MICHAEL", 369 }, 
+{ "MICHELLE", 370 }, 
+{ "MIGUEL", 371 }, 
+{ "MILA", 372 }, 
+{ "MILES", 373 }, 
+{ "MILO", 374 }, 
+{ "MOLLY", 375 }, 
+{ "MORGAN", 376 }, 
+{ "MYA", 377 }, 
+{ "MYLES", 378 }, 
+{ "NAOMI", 379 }, 
+{ "NATALIA", 380 }, 
+{ "NATALIE", 381 }, 
+{ "NATHAN", 382 }, 
+{ "NATHANIEL", 383 }, 
+{ "NEVAEH", 384 }, 
+{ "NICHOLAS", 385 }, 
+{ "NICOLAS", 386 }, 
+{ "NICOLE", 387 }, 
+{ "NOAH", 388 }, 
+{ "NOELLE", 389 }, 
+{ "NOLAN", 390 }, 
+{ "NORA", 391 }, 
+{ "NORAH", 392 }, 
+{ "NOVA", 393 }, 
+{ "OLIVER", 394 }, 
+{ "OLIVIA", 395 }, 
+{ "OMAR", 396 }, 
+{ "OSCAR", 397 }, 
+{ "OWEN", 398 }, 
+{ "PAIGE", 399 }, 
+{ "PAISLEY", 400 }, 
+{ "PARKER", 401 }, 
+{ "PATRICK", 402 }, 
+{ "PAUL", 403 }, 
+{ "PAXTON", 404 }, 
+{ "PAYTON", 405 }, 
+{ "PENELOPE", 406 }, 
+{ "PETER", 407 }, 
+{ "PEYTON", 408 }, 
+{ "PIPER", 409 }, 
+{ "PRESLEY", 410 }, 
+{ "PRESTON", 411 }, 
+{ "QUINN", 412 }, 
+{ "RACHEL", 413 }, 
+{ "RAELYNN", 414 }, 
+{ "REAGAN", 415 }, 
+{ "REBECCA", 416 }, 
+{ "REESE", 417 }, 
+{ "REMI", 418 }, 
+{ "REMINGTON", 419 }, 
+{ "RHETT", 420 }, 
+{ "RICHARD", 421 }, 
+{ "RILEY", 422 }, 
+{ "RIVER", 423 }, 
+{ "ROBERT", 424 }, 
+{ "ROMAN", 425 }, 
+{ "ROSALIE", 426 }, 
+{ "ROSE", 427 }, 
+{ "ROWAN", 428 }, 
+{ "RUBY", 429 }, 
+{ "RYAN", 430 }, 
+{ "RYDER", 431 }, 
+{ "RYKER", 432 }, 
+{ "RYLEE", 433 }, 
+{ "RYLEIGH", 434 }, 
+{ "SADIE", 435 }, 
+{ "SAMANTHA", 436 }, 
+{ "SAMUEL", 437 }, 
+{ "SANTIAGO", 438 }, 
+{ "SARA", 439 }, 
+{ "SARAH", 440 }, 
+{ "SAVANNAH", 441 }, 
+{ "SAWYER", 442 }, 
+{ "SCARLETT", 443 }, 
+{ "SEBASTIAN", 444 }, 
+{ "SELENA", 445 }, 
+{ "SERENITY", 446 }, 
+{ "SIENNA", 447 }, 
+{ "SILAS", 448 }, 
+{ "SKYLAR", 449 }, 
+{ "SLOANE", 450 }, 
+{ "SOFIA", 451 }, 
+{ "SOPHIA", 452 }, 
+{ "SOPHIE", 453 }, 
+{ "STELLA", 454 }, 
+{ "STEVEN", 455 }, 
+{ "SUMMER", 456 }, 
+{ "SYDNEY", 457 }, 
+{ "TAYLOR", 458 }, 
+{ "TEAGAN", 459 }, 
+{ "TESSA", 460 }, 
+{ "THEODORE", 461 }, 
+{ "THIAGO", 462 }, 
+{ "THOMAS", 463 }, 
+{ "TIMOTHY", 464 }, 
+{ "TRINITY", 465 }, 
+{ "TRISTAN", 466 }, 
+{ "TUCKER", 467 }, 
+{ "TYLER", 468 }, 
+{ "VALENTINA", 469 }, 
+{ "VALERIA", 470 }, 
+{ "VALERIE", 471 }, 
+{ "VANESSA", 472 }, 
+{ "VICTOR", 473 }, 
+{ "VICTORIA", 474 }, 
+{ "VINCENT", 475 }, 
+{ "VIOLET", 476 }, 
+{ "VIVIAN", 477 }, 
+{ "WAYLON", 478 }, 
+{ "WESLEY", 479 }, 
+{ "WESTON", 480 }, 
+{ "WILLIAM", 481 }, 
+{ "WILLOW", 482 }, 
+{ "WYATT", 483 }, 
+{ "XANDER", 484 }, 
+{ "XAVIER", 485 }, 
+{ "XIMENA", 486 }, 
+{ "ZACHARY", 487 }, 
+{ "ZANDER", 488 }, 
+{ "ZANE", 489 }, 
+{ "ZAYDEN", 490 }, 
+{ "ZION", 491 }, 
+{ "ZOE", 492 }, 
+{ "ZOEY", 493 }};
 
 #endif

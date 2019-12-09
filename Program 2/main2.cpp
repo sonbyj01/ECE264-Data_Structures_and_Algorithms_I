@@ -117,6 +117,7 @@ int main()
 
 Data* inputs[1100000];
 Data* bucket[100000][500];
+Data* bucket1[100000][500];
 Data* p[1010000];
 
 #include "const.h"
@@ -124,6 +125,8 @@ Data* p[1010000];
 void insertionSort(list<Data *> &l);
 void stdSort(list<Data *> &l);
 void radixsort();
+void radixsortF();
+void radixsortL();
 
 int ssnconvert(string input, int c);
 int bucketc[100000] = {0};
@@ -156,6 +159,8 @@ void sortDataList(list<Data *> &l)
     } else if (dataSize <= 101000) // T1
     {
         radixsort();
+        radixsortF();
+        radixsortL();
     } else // T2
     {
         stdSort(l);
@@ -281,8 +286,48 @@ int ssnconvert(string input, int c)
 
 void radixsortF()
 {
+    int counter = 0;
     for(int i = 0; i < dataSize; i++)
     {
-        
+        for(int j = 0; j < 500; j++)
+        {
+            if(bucket[i][j] == NULL)
+                break;
+            bucket1[counter++][lookFirst.find(bucket[i][j]->firstName)->second] = bucket[i][j];
+            bucket[i][j] = NULL;
+        }
+        counter = 0;
+    }
+}
+
+void radixsortL()
+{
+    int counter = 0;
+    for(int i = 0; i < dataSize; i++)
+    {
+        for(int j = 0; j < 500; j++)
+        {
+            if(bucket[i][j] == NULL)
+                break;
+            bucket[counter++][lookLast.find(bucket1[i][j]->lastName)->second] = bucket1[i][j];
+            bucket1[i][j] = NULL;
+        }
+        counter = 0;
+    }
+    int j = 0;
+    int k = 0;
+    for (int i = 0; i < dataSize; i++)
+    {
+        if (k == bucketc[j])
+        {
+            k = 0;
+            j++;
+            i--;
+        }
+        else
+        {
+            p[i] = bucket[j][k];
+            k++;
+        }
     }
 }

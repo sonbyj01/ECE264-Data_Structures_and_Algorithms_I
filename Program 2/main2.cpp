@@ -119,6 +119,8 @@ Data* inputs[1100000];
 Data* bucket[100000][500];
 Data* p[1010000];
 
+#include "const.h"
+
 void insertionSort(list<Data *> &l);
 void stdSort(list<Data *> &l);
 void radixsort();
@@ -153,7 +155,7 @@ void sortDataList(list<Data *> &l)
         }
     } else if (dataSize <= 101000) // T1
     {
-        stdSort(l);
+        radixsort();
     } else // T2
     {
         stdSort(l);
@@ -275,4 +277,12 @@ int ssnconvert(string input, int c)
     return (input.at(0) - 48) * 100000000 + (input.at(1) - 48) * 10000000 + (input.at(2) - 48) * 1000000 +
     (input.at(4) - 48) * 100000 + (input.at(5) - 48) * 10000 + (input.at(7) - 48) * 1000 +
     (input.at(8) - 48) * 100 + (input.at(9) - 48) * 10 + (input.at(10) - 48);
+}
+
+void radixsortF()
+{
+    for(int i = 0; i < dataSize; i++)
+    {
+        
+    }
 }

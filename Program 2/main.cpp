@@ -87,9 +87,9 @@ int main()
 {
     string filename;
     cout << "Enter name of input file: ";
-    cin >> filename;
+    //cin >> filename;
     list<Data *> theList;
-    loadDataList(theList, filename);
+    loadDataList(theList, "sample2.txt");
 
     cout << "Data loaded.\n";
 
@@ -114,51 +114,53 @@ int main()
 
 // You may add global variables, functions, and/or
 // class defintions here if you wish.
+#define BIN_LENGTH 600
+#define DEPTH 110000
 
-Data* inputs[1100000];
-Data* bucket[100000][500];
-Data* p[1010000];
+#include "const.h"
+
+Data* insertion_array[1100000];
+Data* bucket[BIN_LENGTH][DEPTH];
+Data* temp_array[1010000];   // array version of list
+
+int ssnconvert(string &input, int c);
+int bucketc[BIN_LENGTH] = {0};
+int bucketc1[BIN_LENGTH] = {0};
+int bucketc2[BIN_LENGTH] = {0};
+int bucketc3[BIN_LENGTH] = {0};
+int dataSize = 0;
 
 void insertionSort(list<Data *> &l);
 void stdSort(list<Data *> &l);
-void radixsort();
-
-int ssnconvert(string input, int c);
-int bucketc[100000] = {0};
-int dataSize;
-
+void radixsort(list<Data *> &l);
+void radixsortF(list<Data *> &l);
+void radixsortL(list<Data *> &l);
 bool cmp(const Data *a, const Data *b);
+void reset_bucketc();
 
 void sortDataList(list<Data *> &l) 
 {
-    int i = 0;
-    for (auto at : l) 
+    for (auto ele : l) 
     {
-        p[i] = at;
-        i++;
+        temp_array[dataSize] = ele;
+        dataSize++;
     }
-    dataSize = i;
     
-    if (p[0]->firstName == p[1]->firstName && p[0]->firstName != p[dataSize - 1]->firstName)    // T3
+    if (temp_array[0]->firstName == temp_array[1]->firstName && temp_array[0]->firstName != temp_array[dataSize - 1]->firstName)    // T3
     {
         insertionSort(l);
-    } else if (p[0]->firstName == p[dataSize - 1]->firstName && p[0]->lastName == p[dataSize - 1]->lastName) // T4
+    } else if (temp_array[0]->firstName == temp_array[dataSize - 1]->firstName && temp_array[0]->lastName == temp_array[dataSize - 1]->lastName) // T4
     {
-        radixsort();
-        auto op = l.begin();
-        for (int y = 0; y<l.size(); y++) 
-        {
-            *op = p[y];
-            op++;
-        }
-    } else if (dataSize <= 101000) // T1
+        radixsort(l);
+    } else if (dataSize <= 101000)  // T1, T2
     {
-        stdSort(l);
-    } else // T2
+        radixsort(l);
+        radixsortF(l);
+        radixsortL(l);
+    } else
     {
         stdSort(l);
-    }
-    
+    } 
 }
 
 void stdSort(list<Data *> &l) 
@@ -177,48 +179,47 @@ void insertionSort(list<Data *> &l)
 {
     
     int startVal = 0;
-    int i, j, p, k=0;
+    int i, j, temp_array, k=0;
     for(auto at : l) {
-        inputs[k] = at;
+        insertion_array[k] = at;
         k++;
     }
     
     Data *key;
     for(i = 1; i < dataSize; i++)
     {
-        if (inputs[i]->firstName != inputs[i-1]->firstName)
+        if (insertion_array[i]->firstName != insertion_array[i-1]->firstName)
         startVal = i;
-        key = inputs[i];
+        key = insertion_array[i];
         j = i-1;
         
-        while(j >= startVal && inputs[j]->ssn>key->ssn)
+        while(j >= startVal && insertion_array[j]->ssn>key->ssn)
         {
-            inputs[j+1] = inputs[j];
+            insertion_array[j+1] = insertion_array[j];
             j--;
         }
-        inputs[j+1]=key;
+        insertion_array[j+1]=key;
     }
     auto it = l.begin();
-    for (p = 0; p < dataSize; p++)
+    for (temp_array = 0; temp_array < dataSize; temp_array++)
     {
-        *it=inputs[p];
+        *it=insertion_array[temp_array];
         it++;
     }
 }
 
-void radixsort()
+void radixsort(list<Data *> &l)
 {
     int f2ssn;
     for (int i = 0; i < dataSize; i++)
     {
-        f2ssn = ssnconvert((p[i]->ssn),5);
-        bucket[f2ssn][bucketc[f2ssn]] = p[i];
-        bucketc[f2ssn] += 1;
+        f2ssn = ssnconvert((temp_array[i]->ssn), 5);
+        bucket[bucketc[f2ssn]++][f2ssn] = temp_array[i];
     }
-    
+    auto op = l.begin();
     int j = 0;
     int k = 0;
-    for (int i = 0; i < dataSize; i++)
+    for (int i = 0; i < l.size(); i++)
     {
         if (k == bucketc[j])
         {
@@ -228,27 +229,23 @@ void radixsort()
         }
         else
         {
-            p[i] = bucket[j][k];
+            temp_array[i] = bucket[k][j];
             k++;
         }
-    }
-    
-    for (int i = 0; i < 100000; i++)
-    {
-        bucketc[i] = 0;
     }
     int fssn;
     for (int i = 0; i < dataSize; i++)
     {
-        fssn = ssnconvert((p[i]->ssn), 4);
-        bucket[fssn][bucketc[fssn]] = p[i];
-        bucketc[fssn] += 1;
+        fssn = ssnconvert((temp_array[i]->ssn), 4);
+        bucket1[bucketc1[fssn]++][fssn] = temp_array[i];
+        //bucketc1[fssn] += 1;
     }
+    op = l.begin();
     j = 0;
     k = 0;
-    for (int i = 0; i < dataSize; i++)
+    for (int i = 0; i < l.size(); i++)
     {
-        if (k == bucketc[j])
+        if (k == bucketc1[j])
         {
             k = 0;
             j++;
@@ -256,13 +253,15 @@ void radixsort()
         }
         else
         {
-            p[i] = bucket[j][k];
+            temp_array[i] = bucket1[k][j];
+            *op = temp_array[i];
             k++;
+            op++;
         }
     }
 }
 
-int ssnconvert(string input, int c)
+int ssnconvert(string &input, int c)
 {
     if(c == 4)
     {
@@ -275,4 +274,60 @@ int ssnconvert(string input, int c)
     return (input.at(0) - 48) * 100000000 + (input.at(1) - 48) * 10000000 + (input.at(2) - 48) * 1000000 +
     (input.at(4) - 48) * 100000 + (input.at(5) - 48) * 10000 + (input.at(7) - 48) * 1000 +
     (input.at(8) - 48) * 100 + (input.at(9) - 48) * 10 + (input.at(10) - 48);
+}
+
+void radixsortF(list<Data *> &l)
+{
+    for (int i = 0; i < dataSize; i++)
+    {
+        int hash = lookFirst[temp_array[i]->firstName];
+        cout << hash << ", " << bucketc2[hash] << temp_array[i]->firstName << endl;
+        bucket2[bucketc2[hash]++][hash] = temp_array[i];
+    }
+    auto op = l.begin();
+    int j = 0;
+    int k = 0;
+    for (int i = 0; i < l.size(); i++)
+    {
+        if (k == bucketc2[j])
+        {
+            k = 0;
+            j++;
+            i--;
+        }
+        else
+        {
+            temp_array[i] = bucket2[k][j];
+            k++;
+        }
+    }
+}
+
+void radixsortL(list<Data *> &l)
+{
+    for (int i = 0; i < dataSize; i++)
+    {
+        int hash = lookLast[temp_array[i]->lastName];
+        bucket3[bucketc3[hash]++][hash] = temp_array[i];
+        //bucketc3[hash] += 1;
+    }
+    auto op = l.begin();
+    int j = 0;
+    int k = 0;
+    for (int i = 0; i < l.size(); i++)
+    {
+        if (k == bucketc3[j])
+        {
+            k = 0;
+            j++;
+            i--;
+        }
+        else
+        {
+            temp_array[i] = bucket3[k][j];
+            *op = temp_array[i];
+            k++;
+            op++;
+        }
+    }
 }

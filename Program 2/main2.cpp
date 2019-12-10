@@ -87,9 +87,9 @@ int main()
 {
     string filename;
     cout << "Enter name of input file: ";
-    cin >> filename;
+    //cin >> filename;
     list<Data *> theList;
-    loadDataList(theList, filename);
+    loadDataList(theList, "sample2.txt");
 
     cout << "Data loaded.\n";
 
@@ -114,12 +114,14 @@ int main()
 
 // You may add global variables, functions, and/or
 // class defintions here if you wish.
+#define BIN_LENGTH 600
+#define DEPTH 110000
 
 Data* insertion_array[1100000];
-Data* bucket[100000][500];
-Data* bucket1[100000][500];
-Data* bucket2[100000][500];
-Data* bucket3[100000][500];
+Data* bucket[BIN_LENGTH][DEPTH];
+Data* bucket1[BIN_LENGTH][DEPTH];
+Data* bucket2[BIN_LENGTH][DEPTH];
+Data* bucket3[BIN_LENGTH][DEPTH];
 Data* temp_array[1010000];   // array version of list
 
 #include "const.h"
@@ -132,11 +134,11 @@ void radixsortL(list<Data *> &l);
 bool cmp(const Data *a, const Data *b);
 void reset_bucketc();
 
-int ssnconvert(string input, int c);
-int bucketc[100000] = {0};
-int bucketc1[100000] = {0};
-int bucketc2[100000] = {0};
-int bucketc3[100000] = {0};
+int ssnconvert(string &input, int c);
+int bucketc[BIN_LENGTH] = {0};
+int bucketc1[BIN_LENGTH] = {0};
+int bucketc2[BIN_LENGTH] = {0};
+int bucketc3[BIN_LENGTH] = {0};
 int dataSize = 0;
 
 void sortDataList(list<Data *> &l) 
@@ -159,16 +161,12 @@ void sortDataList(list<Data *> &l)
         //     *op = p[y];
         //     op++;
         // }
-    } else if (dataSize <= 101000) // T1
+    } else // T1, T2
     {
         radixsort(l);
         radixsortF(l);
         radixsortL(l);
-    } else // T2
-    {
-        stdSort(l);
     }
-    
 }
 
 void stdSort(list<Data *> &l) 
@@ -221,9 +219,8 @@ void radixsort(list<Data *> &l)
     int f2ssn;
     for (int i = 0; i < dataSize; i++)
     {
-        f2ssn = ssnconvert((temp_array[i]->ssn),5);
-        bucket[f2ssn][bucketc[f2ssn]++] = temp_array[i];
-        //bucketc[f2ssn] += 1;
+        f2ssn = ssnconvert((temp_array[i]->ssn), 5);
+        bucket[bucketc[f2ssn]++][f2ssn] = temp_array[i];
     }
     auto op = l.begin();
     int j = 0;
@@ -238,7 +235,7 @@ void radixsort(list<Data *> &l)
         }
         else
         {
-            temp_array[i] = bucket[j][k];
+            temp_array[i] = bucket[k][j];
             k++;
         }
     }
@@ -246,7 +243,7 @@ void radixsort(list<Data *> &l)
     for (int i = 0; i < dataSize; i++)
     {
         fssn = ssnconvert((temp_array[i]->ssn), 4);
-        bucket1[fssn][bucketc1[fssn]++] = temp_array[i];
+        bucket1[bucketc1[fssn]++][fssn] = temp_array[i];
         //bucketc1[fssn] += 1;
     }
     op = l.begin();
@@ -262,7 +259,7 @@ void radixsort(list<Data *> &l)
         }
         else
         {
-            temp_array[i] = bucket1[j][k];
+            temp_array[i] = bucket1[k][j];
             *op = temp_array[i];
             k++;
             op++;
@@ -270,7 +267,7 @@ void radixsort(list<Data *> &l)
     }
 }
 
-int ssnconvert(string input, int c)
+int ssnconvert(string &input, int c)
 {
     if(c == 4)
     {
@@ -290,8 +287,8 @@ void radixsortF(list<Data *> &l)
     for (int i = 0; i < dataSize; i++)
     {
         int hash = lookFirst[temp_array[i]->firstName];
-        bucket2[hash][bucketc2[hash]++] = temp_array[i];
-        //bucketc2[hash] += 1;
+        cout << hash << ", " << bucketc2[hash] << temp_array[i]->firstName << endl;
+        bucket2[bucketc2[hash]++][hash] = temp_array[i];
     }
     auto op = l.begin();
     int j = 0;
@@ -306,10 +303,8 @@ void radixsortF(list<Data *> &l)
         }
         else
         {
-            temp_array[i] = bucket2[j][k];
-            *op = temp_array[i];
+            temp_array[i] = bucket2[k][j];
             k++;
-            op++;
         }
     }
 }
@@ -319,7 +314,7 @@ void radixsortL(list<Data *> &l)
     for (int i = 0; i < dataSize; i++)
     {
         int hash = lookLast[temp_array[i]->lastName];
-        bucket3[hash][bucketc3[hash]++] = temp_array[i];
+        bucket3[bucketc3[hash]++][hash] = temp_array[i];
         //bucketc3[hash] += 1;
     }
     auto op = l.begin();
@@ -335,7 +330,7 @@ void radixsortL(list<Data *> &l)
         }
         else
         {
-            temp_array[i] = bucket3[j][k];
+            temp_array[i] = bucket3[k][j];
             *op = temp_array[i];
             k++;
             op++;

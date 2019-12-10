@@ -161,11 +161,14 @@ void sortDataList(list<Data *> &l)
         //     *op = p[y];
         //     op++;
         // }
-    } else // T1, T2
+    } else if (dataSize <= 101000)// T1, T2
     {
         radixsort(l);
         radixsortF(l);
         radixsortL(l);
+    } else
+    {
+        stdSort(l);
     }
 }
 

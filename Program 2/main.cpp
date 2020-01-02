@@ -157,23 +157,35 @@ void sortDataList(list<Data *> &l)
     } else if (pointers_arr[0]->firstName == pointers_arr[dataSize - 1]->firstName && pointers_arr[0]->lastName == pointers_arr[dataSize - 1]->lastName) // T4
     {
         radixsort(dataSize);
+
+        dataSize = 0;
+        for(auto ele = l.begin(); ele != l.end(); ++ele) 
+        {
+            *ele = pointers_arr[dataSize++];
+        }
     } else if (dataSize <= 101000)  // T1, T2
     {
         radixsort(dataSize);
         radixsortF(dataSize);
         radixsortL(dataSize);
+
+        dataSize = 0;
+        for(auto ele = l.begin(); ele != l.end(); ++ele) 
+        {
+            *ele = pointers_arr[dataSize++];
+        }
     } else
     {
         radixsort(dataSize);
         radixsortF(dataSize);
         radixsortL(dataSize);
+        
+        dataSize = 0;
+        for(auto ele = l.begin(); ele != l.end(); ++ele) 
+        {
+            *ele = pointers_arr[dataSize++];
+        }
     } 
-
-    dataSize = 0;
-    for(auto ele = l.begin(); ele != l.end(); ++ele) 
-    {
-        *ele = pointers_arr[dataSize++];
-    }
 }
 
 void insertionSort(list<Data *> &l)

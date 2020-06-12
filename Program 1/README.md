@@ -7,11 +7,6 @@ $ g++ -std=c++11 main.cpp
 $ ./a.out
 ```
 
-I wrote a sorting python script to retrieve an ordered text file for comparison. 
-```
-$ python3 sort.py
-```
-
 ## Entire Google Drive with test cases and assignment sheet
 [Google Drive](https://drive.google.com/open?id=1M9zFOXyCZ35Om4t_lbd3N2tjLXOamVS0)
 

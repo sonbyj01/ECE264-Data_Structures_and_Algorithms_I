@@ -6,3 +6,8 @@
 $ g++ -std=c++11 main.cpp
 $ ./a.out
 ```
+
+I wrote a sorting python script to retrieve an ordered text file for comparison. 
+```
+$ python3 sort.py
+```
